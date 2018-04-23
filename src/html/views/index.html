@@ -1,0 +1,15 @@
+<% var data = {
+  title: "Заголовок | Проект",
+  author: "fedodd"
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<div class="container">
+  <%= _.template(require('./../includes/promo.html'))(data) %>
+  <p>Первая страница.</p>
+  <p>
+    <img class="image" src="img/3CF983BD-0710-46AA-A209-6C5ED3FAE7DF.jpg">
+  </p>
+</div>
+var template = require("pug-loader!./menu.pug");
+<%= _.template(require('./../includes/footer.html'))(data) %>
