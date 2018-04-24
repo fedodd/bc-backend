@@ -1,0 +1,10 @@
+.header {
+  background-color: white;
+  height: 100px;
+  
+}
+
+.header-holder {
+  display: flex;
+  height: 100%;
+}
