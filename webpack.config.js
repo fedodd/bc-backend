@@ -56,6 +56,10 @@ module.exports = {
       })
     }, */
     {
+      test: /\.pug$/,
+      loader: 'pug-loader'
+    },
+    {
       test: /\.html$/,
       include: path.resolve(__dirname, 'src/html/includes'),
       use: ['raw-loader']
