@@ -23,7 +23,7 @@ const htmlPlugins = generateHtmlPlugins('./src/html/views');
 module.exports = {
   entry: [
     './src/js/index.js',
-    './src/styles/common.css'
+    './src/styles/common.pcss'
   ],
   output: {
     filename: './js/bundle.js'
@@ -41,7 +41,7 @@ module.exports = {
       }
     },
     {
-      test: /\.css$/,
+      test: /\.pcss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
@@ -50,11 +50,6 @@ module.exports = {
         ]
       })
     },
-      /*       use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader'
-      })
-    }, */
     {
       test: /\.pug$/,
       loader: 'pug-loader'
