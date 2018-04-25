@@ -1,15 +1,12 @@
 <% var data = {
-  title: "Заголовок | Проект",
-  author: "fedodd"
+  title: "BOY CUT"
 }; %>
 <%= _.template(require('./../includes/header.html'))(data) %>
 
 <div class="container">
   <%= _.template(require('./../includes/banner.html'))(data) %>
-  <p>Первая страница.И вторая</p>
   <p>
     <img class="image" src="img/3CF983BD-0710-46AA-A209-6C5ED3FAE7DF.jpg">
   </p>
 </div>
-<%= _.template(require('apply-loader!pug-loader!./../includes/menu.pug'))(data) %>
 <%= _.template(require('./../includes/footer.html'))(data) %>

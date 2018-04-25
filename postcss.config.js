@@ -1,6 +1,8 @@
 module.exports = {
   plugins: {
-    'postcss-easy-import': {},
+    'postcss-easy-import': {
+      extensions: ['.css', '.pcss']
+    },
     'postcss-mixins': {},
     'postcss-simple-vars': {},
     'postcss-cssnext': {},

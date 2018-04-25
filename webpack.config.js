@@ -52,8 +52,13 @@ module.exports = {
     },
     {
       test: /\.(woff|woff2|eot|ttf|otf)$/,
-      use: [
-        'file-loader'
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+          publicPath: '..'
+        }
+      }
       ]
     },
     {
@@ -69,6 +74,10 @@ module.exports = {
       allChunks: true
     }),
     new CopyWebpackPlugin([{
+      from: './src/fonts',
+      to: './fonts'
+    },
+    {
       from: './src/img',
       to: './img'
     },

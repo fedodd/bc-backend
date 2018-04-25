@@ -1,0 +1,20 @@
+.banner-dots {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner-dot {
+  display: inline-block;
+  margin: 0 10px;
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: .5;
+
+  &.is__active {
+    opacity: 1;
+  }
+}

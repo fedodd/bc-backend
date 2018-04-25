@@ -1,8 +1,43 @@
 .banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .banner-title {
+  font: $font-mainTitle;
   margin: 0;
   padding: 0;
+}
+
+.banner-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-item {
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: calc(50% + 20px);
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.banner-subtitle {
+  font: $font-subtitle;
 }

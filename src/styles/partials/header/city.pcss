@@ -37,17 +37,25 @@
 
 .cityActive {
   position: absolute;
+  z-index: 10;
   bottom: -60px;
+  left: -20px;
   height: 60px;
-  width: 20%;
+  padding: 0 $margin-holder 0 80px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  transform: skew(-20deg);
+}
+
+.cityActive-title {
   transform: skew(20deg);
 }
 
 .cityActive-mapmarker {
   font-family: 'WebSymbolsLiga';
+  color: red;
+  padding-right: 10px; 
 }
