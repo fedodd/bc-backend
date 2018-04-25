@@ -1,9 +1,17 @@
 .header {
   height: $header-height;
+  position: relative;
+  font: 20px;
+  /* font: $font; */
 }
 
 .header-holder {
   display: flex;
-  height: 100%;
+  height: $header-height;
   align-items: center;
+  justify-content: space-between;
+
+  &.holder {
+    margin-right: 0;
+  }
 }

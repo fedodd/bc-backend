@@ -1,0 +1,53 @@
+.cityBlock-wrapper {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+
+  &.is__active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+  }
+}
+
+.city-list {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.city-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+}
+
+.cityActive {
+  position: absolute;
+  bottom: -60px;
+  height: 60px;
+  width: 20%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transform: skew(20deg);
+}
+
+.cityActive-mapmarker {
+  font-family: 'WebSymbolsLiga';
+}

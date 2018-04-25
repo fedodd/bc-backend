@@ -51,8 +51,10 @@ module.exports = {
       })
     },
     {
-      test: /\.pug$/,
-      loader: 'pug-loader'
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: [
+        'file-loader'
+      ]
     },
     {
       test: /\.html$/,
@@ -67,10 +69,6 @@ module.exports = {
       allChunks: true
     }),
     new CopyWebpackPlugin([{
-      from: './src/fonts',
-      to: './fonts'
-    },
-    {
       from: './src/img',
       to: './img'
     },

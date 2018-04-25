@@ -6,7 +6,6 @@ module.exports = {
     'postcss-cssnext': {},
     'postcss-nested': {},
     'postcss-conditionals': {},
-    'postcss-sorting': {},
     'cssnano': {}
   }
 };
