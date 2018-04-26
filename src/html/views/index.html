@@ -5,6 +5,8 @@
 
 <div class="container">
   <%= _.template(require('./../includes/banner.html'))(data) %>
-  <%= _.template(require('./../includes/about.html'))(data) %>
+  <%= _.template(require('./../includes/aboutSpecial.html'))(data) %>
+  <%= _.template(require('./../includes/textBlock-about.html'))(data) %>
+  <%= _.template(require('./../includes/priceBlock.html'))(data) %>
 </div>
 <%= _.template(require('./../includes/footer.html'))(data) %>

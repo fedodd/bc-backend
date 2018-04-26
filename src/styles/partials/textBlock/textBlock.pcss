@@ -1,0 +1,51 @@
+.textBlock {
+  position: relative;
+  background-color: white;
+  height: 100vh;
+
+  &.is__alt {
+    height: auto;
+  }
+}
+
+.textBlock-title {
+  z-index: 5;
+  font: $font-altTitle;
+  position: absolute;
+  margin: 0;
+  margin-top: 40px;
+  margin-left: $margin-holder;
+  padding: 0;
+  color: $color-altTitle;
+  text-transform: uppercase;
+}
+
+.textBlock-wrapper {
+  display: flex;
+}
+
+.textBlock-img {
+  height: 100vh;
+  width: 50%;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.textBlock-content {
+  height: 100vh;
+  width: 50%;
+  padding: 100px 90px;
+}
+
+.textBlock-mainTitle {
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  font: $font-title;
+  text-transform: uppercase;
+}
+
+.textBlock-description {
+  margin: 0;
+  padding: 0;
+}
