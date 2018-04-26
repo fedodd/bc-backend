@@ -5,8 +5,6 @@
 
 <div class="container">
   <%= _.template(require('./../includes/banner.html'))(data) %>
-  <p>
-    <img class="image" src="img/3CF983BD-0710-46AA-A209-6C5ED3FAE7DF.jpg">
-  </p>
+  <%= _.template(require('./../includes/about.html'))(data) %>
 </div>
 <%= _.template(require('./../includes/footer.html'))(data) %>
