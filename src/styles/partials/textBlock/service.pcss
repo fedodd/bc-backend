@@ -19,7 +19,14 @@
   background-position: 0 0;
 }
 
+.service-textWrapper {
+  display: flex;
+  padding: 0 20px 0 $margin-block;
+  justify-content: space-between;
+}
+
 .service-textBlock {
+  width: 60%;
   position: relative;
   top: -64px;
 }
@@ -28,9 +35,25 @@
   margin: 0;
   padding: 0;
   font: $font-service;
-  width: 50%;
 }
 
 .service-description {
   font: $font-descr;
+  color: $color-blue;
+}
+
+.service-priceBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-priceLine {
+  margin: 30px 0;
+  width: 58px;
+  height: 7px;
+  background-color: $color-blue;
+}
+
+.service-price {
+  font: $font-service;
 }
