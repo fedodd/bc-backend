@@ -1,11 +1,16 @@
-.banner-dots {
+.slider-dots {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+
+  &.is__alt {
+    position: static;
+    transform: none;
+  }
 }
 
-.banner-dot {
+.slider-dot {
   display: inline-block;
   margin: 0 10px;
   height: 8px;

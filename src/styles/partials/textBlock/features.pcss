@@ -1,6 +1,10 @@
 .features-wrapper {
   display: flex;
   align-items: center;
+
+  &.is__academy {
+    justify-content: center;
+  }
 }
 
 .features {
@@ -9,6 +13,11 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+
+  &.is__academy {
+    flex-direction: column;
+    align-items: middle;
+  }
 }
 
 .feature {
@@ -44,6 +53,19 @@
   &:nth-child(n+3) {
     border-bottom: none;
   }
+
+  .is__academy & {
+    border-right: none;
+    width: 100%;
+
+    &:last-child {
+      border: none;
+    }
+    
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .feature-icon {
@@ -52,6 +74,14 @@
   &.is__little {
     margin-top: 6px; 
     height: 30px;
+  }
+
+  .is__academy .feature & {
+    height: 80px;
+
+    &.is__little {
+      height: 38px;
+    }
   }
 }
 
