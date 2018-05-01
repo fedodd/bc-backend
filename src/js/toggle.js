@@ -1,5 +1,4 @@
 export default (toggleBtn, toggleBlock) => {
-
   const toggleFunc = () => {
     document.getElementById(toggleBlock).classList.toggle('is__active');
   };

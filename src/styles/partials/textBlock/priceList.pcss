@@ -20,14 +20,10 @@
 .priceList-item {
   margin: 0;
   position: relative;
-  
-  padding: 40px 0 40px 40px;
+  padding: 30px 0 45px 60px;
   box-sizing: border-box;
-  border-right: 3px solid $color-border;
-  border-bottom: 3px solid $color-border;
-/*   border-width: 2px;
-  border-style: solid;
-  border-image: linear-gradient (to right, rgb(224,229,231) 80%, transparent); */
+  border-right: 2px solid $color-border;
+  border-bottom: 2px solid $color-border;
 
   &::after {
     content: '';
@@ -35,14 +31,18 @@
     position: absolute;
     right: -26px;
     bottom: -26px;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     background-color: $color-lightGrey;
     z-index: 20;
   }
 
   @media only screen and (min-width: 1280px) {
     width: 25%;
+
+    &:nth-child(4n+1) {
+      padding-left: 35px;
+    }
 
     &:nth-child(4n) {
       border-right: none;
@@ -57,6 +57,10 @@
   @media only screen and (max-width: 1280px) { 
     width: 50%;
 
+    &:nth-child(2n+1) {
+      padding-left: 35px;
+    }
+
     &:nth-child(2n) {
       border-right: none;
     }
@@ -70,14 +74,14 @@
 .priceList-title {
   white-space: nowrap;
   color: $color-blue;
-  font: $font-descr;
+  font: $font-descrAlt;
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
 }
 
 .priceList-price {
-  font: $font-service;
+  font: $font-price;
   margin: 0;
   padding: 0;
 }
