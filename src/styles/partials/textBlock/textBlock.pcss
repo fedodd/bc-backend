@@ -18,6 +18,12 @@
   padding: 0;
   color: $color-altTitle;
   text-transform: uppercase;
+
+  .textBlock.is__alt .textBlock-wrapper & {
+    color: $color-black;
+    position: static;
+    margin-bottom: 65px;
+  }
 }
 
 .textBlock-wrapper {
@@ -35,6 +41,11 @@
   height: 100vh;
   width: 50%;
   padding: 100px 90px;
+  box-sizing: border-box;
+
+  .textBlock.is__alt .textBlock-wrapper & {
+    padding-left: $margin-holder;
+  }
 }
 
 .textBlock-mainTitle {
@@ -51,4 +62,5 @@
   padding: 0;
   color: $color-greyText;
   font: $font-descr;
+  padding-bottom: 70px;
 }
