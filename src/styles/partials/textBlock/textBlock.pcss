@@ -19,7 +19,7 @@
   color: $color-altTitle;
   text-transform: uppercase;
 
-  .textBlock.is__alt .textBlock-wrapper & {
+  .textBlock-wrapper.is__alt  & {
     color: $color-black;
     position: static;
     margin-bottom: 65px;
@@ -28,22 +28,23 @@
 
 .textBlock-wrapper {
   display: flex;
+  height: 100vh;
 }
 
 .textBlock-img {
-  height: 100vh;
+  height: 100%;
   width: 50%;
   background-size: cover;
   background-position: 0 0;
 }
 
 .textBlock-content {
-  height: 100vh;
+  height: 100%;
   width: 50%;
   padding: 100px 90px;
   box-sizing: border-box;
 
-  .textBlock.is__alt .textBlock-wrapper & {
+  .textBlock-wrapper.is__alt  & {
     padding-left: $margin-holder;
   }
 }
