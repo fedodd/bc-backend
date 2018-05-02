@@ -1,0 +1,54 @@
+.popup {
+  display: none;
+  position: absolute;
+  background-color: $color-accent;
+  width: 50vw;
+  top: -20px;
+  left: -120px;
+  align-items: flex-start;
+  z-index: 10;
+  justify-content: space-around;
+  padding: 90px 60px 60px 60px;
+  box-sizing: border-box;
+  
+
+  &.is__active {
+    display: flex;
+  }
+}
+
+.popup-close {
+  position: absolute;
+  right: 75px;
+  top: 45px;
+  
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 36px;
+    background-color: black;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.popup-title {
+  font: $font-service;
+  color: white;
+  flex-basis: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.popup-form {
+  flex-basis: auto;
+}
