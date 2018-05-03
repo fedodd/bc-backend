@@ -11,5 +11,3 @@ toggle('cityClose', headerToggleBlock);
 const academyToggleBlock = ['academyPopup', 'academyPopupBtn', 'academySliderDots', 'academySlider'];
 toggle('academyPopupBtn', academyToggleBlock);
 toggle('academyPopupClose', academyToggleBlock);
-
-hover('serviceItem', ['serviceBlock']);
