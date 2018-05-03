@@ -14,6 +14,10 @@
   height: 100%;
   display: flex; /* Флекс опредеялет положение заголовка внизу блока */
   align-items: flex-end;
+  
+  &.is__active {
+    display: none;
+  }
 
 }
 
@@ -68,4 +72,13 @@
 
 .academy-popup {
   position: relative;
+  top: 60px;
+}
+
+#academySliderDots,
+#academySlider,
+#academyPopupBtn {
+  &.is__active {
+    display: none;
+  }
 }

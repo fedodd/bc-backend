@@ -2,27 +2,44 @@
   position: absolute;
   color: white;
   top: 0;
-  left: 0;
+  left: -10000px;
   height: 100%;
   width: 100%;
-  display: none;
+  transition: .3s;
+  background-color: black;
 
   &.is__active {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
+    left: 0;
   }
+}
+
+.cityBlock-holder {
+  position: relative;
+  width: auto;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .city-list {
   position: relative;
-  display: flex;
   padding: 0;
   margin: 0;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  list-style: none;
+  table-layout: fixed;
+  width: auto;
+  margin-left: 100px;
+  border-spacing: 60px 20px;
+  white-space: nowrap;
+}
+
+.city-item {
+  width: auto;
+  transition: .3s;
+
+  &:hover {
+    color: $color-accent;
+  }
 }
 
 .city-link {
@@ -38,21 +55,39 @@
 .cityActive {
   position: absolute;
   z-index: 10;
-  bottom: -60px;
-  left: -20px;
-  height: 60px;
-  padding: 0 $margin-holder 0 80px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
   transform: skew(-20deg);
 
   &:hover {
     cursor: pointer;
   }
 }
+
+.cityActive-wrapper {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -60px;
+  left: -20px;
+  height: 60px;
+  width: 260px;
+  padding: 0 $margin-holder 0 80px;
+  transition: 0.3s;
+  background-color: white;
+
+  &.is__moving {
+    z-index: 20;
+    left: -10000px;
+    background-color: black;
+    color: $color-accent;
+
+    &.is__active {
+      left: 0;
+    }
+  }
+}
+
 
 .cityActive-title {
   transform: skew(20deg);

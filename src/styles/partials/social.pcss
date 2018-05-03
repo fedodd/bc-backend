@@ -8,6 +8,11 @@
 
 .social-item {
   margin-left: 30px;
+
+  &:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
 }
 
 .social-title {
@@ -15,6 +20,17 @@
 }
 
 .social-icon {
+  transition: .3s;
+  padding: 5px;
+
+  .social-item & {
+    padding: 0;
+  }
+
+  &:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
 
   &.is__vk {
     width: 23px;

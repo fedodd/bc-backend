@@ -19,7 +19,7 @@
       </div>
       <nav class="header-nav">
         <ul class="menu">
-          <li class="menu-item">
+          <td class="menu-item">
             <a class="menu-link" href="#"></a>
           </li>
           <li class="menu-item">
@@ -45,46 +45,60 @@
     </div>
     <div class="cityBlock" id="cityBlock">
       <div class="cityBlock-wrapper" id="cityBlock-wrapper">
-        <div class="header-logoWrapper">
-          <img class="header-logo is__alt" src="./../../img/logo_white.svg" alt="">
+        <div class="holder cityBlock-holder">
+          <div class="header-logoWrapper">
+            <img class="header-logo is__alt" src="./../../img/logo_white.svg" alt="">
+          </div>
+          <table class="city-list">
+            <tr class="city-row">
+              <td class="city-item">
+                <a href="" class="city-link">Москва</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Санкт-Петербург</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Воронеж</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Казань</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Екатеринбург</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="city-item">
+                <a href="" class="city-link">Самара</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Тюмень</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Краснодар</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Пермь</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Баку</a>
+              </td>
+            </tr>
+          </table>
+          <div class="popup-close is__alt" id="cityClose">
+            <span class="popup-closeElem"></span>
+          </div>
         </div>
-        <ul class="city-list">
-          <li class="city-item">
-            <a href="" class="city-link">Москва</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Санкт-Петербург</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Воронеж</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Казань</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Екатеринбург</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Самара</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Тюмень</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Краснодар</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Пермь</a>
-          </li>
-          <li class="city-item">
-            <a href="" class="city-link">Баку</a>
-          </li>
-        </ul>
       </div>
       <div class="cityActive" id="cityActive">
-        <span class="cityActive-title" id="cityActive-title">
-          <span class="cityActive-mapmarker">u</span>Москва
-        </span>
+        <div class="cityActive-wrapper">
+          <span class="cityActive-title">
+            <span class="cityActive-mapmarker">u</span>Москва
+          </span>
+        </div>
+        <div class="cityActive-wrapper is__moving" id="cityActiveWrapper">
+          <span class="cityActive-title">+ мой город</span>
+        </div>
       </div>
     </div>
   </header>

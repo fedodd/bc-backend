@@ -25,14 +25,16 @@
     <div class="textBlock-img">
        <div class="academy">
         <h2 class="academy-title">ПРЕПОДАВАТЕЛИ</h2>
-        <div class="button-wrapper is__positioned">
-          <div class="button">
+        <div class="button-wrapper button-hidden" id="academyPopupBtn">
+          <div class="button is__alt">
             <span class="button-text">ИЩЕМ МОДЕЛЕЙ</span>
           </div>
         </div>
         <div class="academy-popup">
-          <div class="popup">
-            <div class="popup-close"></div>
+          <div class="popup" id="academyPopup">
+            <div class="popup-close" id="academyPopupClose">
+              <span class="popup-closeElem"></span>
+            </div>
             <h3 class="popup-title">ИЩЕМ МОДЕЛЕЙ</h3>
             <form action="" class="form is__popup popup-form">
               <input type="text" class="form-input" placeholder="Ваше имя">
@@ -43,7 +45,7 @@
             </form>
           </div>      
         </div>
-        <div class="academy-slider">
+        <div class="academy-slider" id="academySlider">
           <div class="academy-sliderItem">
             <div class="academy-imgWrapper">
               <div class="academy-img" style="background-image: url('./../img/imgaca.jpg')"></div>
@@ -52,7 +54,7 @@
             <p class="academy-descr">Несколько просмотренных видеоуроков на YouTube, ножницы в руках и расческа в кармане.</p>
           </div>
         </div> 
-        <div class="slider-dots is__alt">
+        <div class="slider-dots is__alt" id="academySliderDots">
           <span class="slider-dot"></span>
           <span class="slider-dot is__active"></span>
           <span class="slider-dot"></span>

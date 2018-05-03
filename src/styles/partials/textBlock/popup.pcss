@@ -6,12 +6,11 @@
   top: -20px;
   left: -120px;
   align-items: flex-start;
-  z-index: 10;
+  z-index: 20;
   justify-content: space-around;
   padding: 90px 60px 60px 60px;
   box-sizing: border-box;
   
-
   &.is__active {
     display: flex;
   }
@@ -19,11 +18,24 @@
 
 .popup-close {
   position: absolute;
-  right: 75px;
+  right: 30px;
   top: 45px;
-  
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.is__alt {
+    right: 0;
+    top: $margin-holder;
+  }
+}
+
+.popup-closeElem {
   &::after,
-  &::before {
+  &::before { 
     position: absolute;
     content: '';
     display: inline-block;
@@ -39,7 +51,13 @@
   &::before {
     transform: rotate(-45deg);
   }
+
+  .popup-close.is__alt &::after,
+  .popup-close.is__alt &::before {
+    background-color: white;      
+  }
 }
+
 
 .popup-title {
   font: $font-service;
