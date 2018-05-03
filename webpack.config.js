@@ -51,7 +51,7 @@ module.exports = {
       })
     },
     {
-      test: /\.(woff|woff2|eot|ttf|otf|png)$/,
+      test: /\.(woff|woff2|eot|ttf|otf|png|svg|jpg)$/,
       use: [{
         loader: 'file-loader',
         options: {
@@ -80,10 +80,6 @@ module.exports = {
     {
       from: './src/img',
       to: './img'
-    },
-    {
-      from: './src/uploads',
-      to: './uploads'
     }
     ])
   ].concat(htmlPlugins)
