@@ -25,11 +25,28 @@
   border-right: 2px solid $color-border;
   border-bottom: 2px solid $color-border;
 
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+
   &::after {
     content: '';
     display: block;
     position: absolute;
     right: -26px;
+    bottom: -26px;
+    width: 50px;
+    height: 50px;
+    background-color: $color-lightGrey;
+    z-index: 20;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -26px;
     bottom: -26px;
     width: 50px;
     height: 50px;

@@ -1,4 +1,5 @@
 import toggle from './toggle';
+/* import hover from './hover'; */
 
 const headerToggleBlock = ['cityBlock-wrapper', 'cityActive', 'cityActiveWrapper'];
 
@@ -10,3 +11,5 @@ toggle('cityClose', headerToggleBlock);
 const academyToggleBlock = ['academyPopup', 'academyPopupBtn', 'academySliderDots', 'academySlider'];
 toggle('academyPopupBtn', academyToggleBlock);
 toggle('academyPopupClose', academyToggleBlock);
+
+hover('serviceItem', ['serviceBlock']);
