@@ -6,3 +6,4 @@ dist
 .sass-cache
 npm-debug.log
 .vscode
+slick

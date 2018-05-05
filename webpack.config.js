@@ -78,6 +78,10 @@ module.exports = {
       to: './fonts'
     },
     {
+      from: './src/uploads',
+      to: './uploads'
+    },
+    {
       from: './src/img',
       to: './img'
     }

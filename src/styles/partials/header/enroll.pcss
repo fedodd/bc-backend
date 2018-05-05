@@ -1,17 +1,24 @@
 .enroll {
   height: $header-height;
-  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.enroll-wrapper {
+  height: $header-height;
   padding: 0 $margin-holder;
+  padding-bottom: $header-height;
   background-color: $color-accent;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   transition: .3s;
+  background-color: black;
+  background-image: linear-gradient( $color-accent 50%, transparent 50%);
 
   &:hover {
-    background-color: black;
     cursor: pointer;
+    background-position-y: $header-height;
   }
 }
 
