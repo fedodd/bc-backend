@@ -11,21 +11,34 @@
   }
 }
 
-.slider-dot {
+.slider-dots li {
+  position: relative;
   display: inline-block;
   margin: 0 10px;
-  height: 8px;
-  width: 8px;
-  background-color: white;
-  border-radius: 50%;
   opacity: .5;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
 
   &:hover {
     opacity: 1;
     cursor: pointer;
   }
 
-  &.is__active {
+  &.slick-active {
     opacity: 1;
+  }
+
+  & button {
+    display: none;
   }
 }

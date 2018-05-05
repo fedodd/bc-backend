@@ -45,20 +45,19 @@
   <script src="js/bundle.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
-      $('.sliders').slick({
-        arrows: true,
-        dots: true,
-        dotsClass: 'dots'
-      });
-    });
-
-    $(document).ready(function () {
         $('.banner-sliders').slick({
-          arrows: true,
           dots: true,
+          arrows: false,
           dotsClass: 'slider-dots'
         });
       });
+    $(document).ready(function () {
+      $('.academy-slider').slick({
+        dots: true,
+        arrows: false,
+        dotsClass: 'slider-dots is__alt academySlider-dots'
+      });
+    });
   </script>
 </body>
 
