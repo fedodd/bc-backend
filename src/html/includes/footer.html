@@ -48,6 +48,10 @@
         $('.banner-sliders').slick({
           dots: true,
           arrows: false,
+          infinite: true,
+          autoplay: true,
+          pauseOnHover: false,
+          pauseOnDotsHover: true,
           dotsClass: 'slider-dots'
         });
       });
@@ -55,6 +59,9 @@
       $('.academy-slider').slick({
         dots: true,
         arrows: false,
+        infinite: true,
+        autoplay: true,
+        pauseOnDotsHover: true,
         dotsClass: 'slider-dots is__alt academySlider-dots'
       });
     });
