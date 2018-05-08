@@ -6,6 +6,10 @@
   &.is__academy {
     justify-content: center;
   }
+
+  @media only screen and (max-width: 1280px) {
+    margin-bottom: 30px;
+  }
 }
 
 .features {
@@ -30,7 +34,6 @@
   border-right: 2px solid $color-border;
   border-bottom: 2px solid $color-border;
   width: 50%;
-  
 
    &:first-child::after {
     content: '';
@@ -60,12 +63,24 @@
     border-right: none;
     width: 100%;
 
+    &:first-child {
+      padding-top: 0;
+    }
+
     &:last-child {
       border: none;
     }
     
     &::after {
       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    padding: 20px;
+
+    &:nth-child(2n+1) {
+      padding-left: 25px;
     }
   }
 }
@@ -84,7 +99,24 @@
     &.is__little {
       height: 38px;
     }
+
+    @media only screen and (max-width: 1280px) {
+      height: 60px;
+
+      &.is__little {
+        height: 30px;
+      }
+    }
   }
+
+/*   @media only screen and (max-width: 1280px) {
+    height: 27px;
+    
+    &.is__little {
+      margin-top: 4px; 
+      height: 23px;
+    }
+  } */
 }
 
 .feature-title {
@@ -94,6 +126,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
+
+  @media only screen and (max-width: 1280px) {
+    font: $font-descrAltSmall;
+  }
 }
 
 .feature-price {
@@ -102,4 +138,8 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 1280px) {
+    font: $font-priceSmall;
+  }
 }

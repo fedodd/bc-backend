@@ -11,6 +11,10 @@
   &.with__border {
     padding: 18px 43px;
     border: 2px solid rgba(255, 255, 255, .7);
+
+    @media only screen and (max-width: 1280px) {
+      padding: 13px 30px;
+    }
   }
 
   &:hover {
@@ -19,12 +23,25 @@
     border: 2px solid $color-accent;
     cursor: pointer;
     padding: 18px 43px;
+
+    @media only screen and (max-width: 1280px) {
+      padding: 13px 30px;
+    }
   }
 
   &.is__alt:hover {
     color: black;
     border: none;
     padding: 20px 45px;
+
+    @media only screen and (max-width: 1280px) {
+      padding: 15px 32px;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    font: $font-buttonSmall;
+    padding: 15px 32px;
   }
 }
 

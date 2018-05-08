@@ -34,6 +34,11 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  
+  @media only screen and (max-width: $medium) {
+    font-size: 90px;
+    line-height: 92px;
+  }
 }
 
 .banner-img {
@@ -64,4 +69,8 @@
 
 .banner-subtitle {
   font: $font-subtitle;
+
+  @media only screen and (max-width: $medium) {
+    font: $font-subtitleSmall;
+  }
 }

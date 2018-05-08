@@ -1,10 +1,14 @@
 .enroll {
   height: $header-height;
   overflow: hidden;
+  
+  @media only screen and (max-width: $medium) {
+    height: $header-heightSmall;
+  }
 }
 
 .enroll-wrapper {
-  height: $header-height;
+  height: 100%;
   padding: 0 $margin-holder;
   padding-bottom: $header-height;
   background-color: $color-accent;
@@ -19,6 +23,15 @@
   &:hover {
     cursor: pointer;
     background-position-y: $header-height;
+  }
+
+  @media only screen and (max-width: $medium) {
+    padding: 0 30px;
+    padding-bottom: $header-heightSmall;
+
+    &:hover {
+      background-position-y: $header-heightSmall;
+    }
   }
 }
 

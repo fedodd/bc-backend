@@ -34,6 +34,11 @@
   .slick-active & {
     opacity: 1;
   }
+
+  @media only screen and (max-width: 1280px) {
+    top: -50px; /* высота строки заголовка */
+  }
+  
 }
 
 .academy-mainTitle {
@@ -44,6 +49,11 @@
   margin-top: auto;
   margin-bottom: 30px;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 1280px) {
+    font: $font-serviceSmall;
+    margin-bottom: 20px;
+  }
 }
 
 .academy-descr {
@@ -51,6 +61,10 @@
   padding: 0;
   color: $color-blue;
   font: $font-descrAlt;
+
+  @media only screen and (max-width: 1280px) {
+    font: $font-descrAltSmall;
+  }
 }
 
 .academy-imgWrapper {

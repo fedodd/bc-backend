@@ -1,13 +1,18 @@
 .header {
   height: $header-height;
   position: relative;
-  font: $font;
   color: $color-black;
+  font: $font;
+
+  @media only screen and (max-width: $medium) {
+    height: $header-heightSmall;
+    font: $font-small;
+  }
 }
 
 .header-holder {
   display: flex;
-  height: $header-height;
+  height: 100%;
   align-items: center;
   justify-content: space-between;
 

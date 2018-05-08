@@ -24,6 +24,16 @@
     margin-bottom: 20px;
     padding: 20px 45px;
   }
+
+  @media only screen and (max-width: 1280px) {
+    font: $font-descrAltSmall;
+    width: 230px;
+    
+    .is__popup & {
+    margin-bottom: 15px;
+    padding: 15px 30px;
+  }
+  }
 }
 
 .form-submit {
@@ -31,5 +41,13 @@
 
   .is__popup & {
     margin-top: 20px;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    margin-left: 15px;
+
+    .is__popup & {
+      margin-top: 15px;
+    }
   }
 }
