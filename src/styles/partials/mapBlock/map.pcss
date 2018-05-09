@@ -25,8 +25,14 @@
   position: absolute;
   right: $margin-holder;
   bottom: 270px; /* высота open + padding 40px  */
-  font-size: 20px;
-  line-height: 27px;
+  width: 290px;
+  font: $font;
   opacity: .75;
   color: $color-altTitle;
+
+  @mixin respond-to desk {
+    bottom: 200px; /* высота open + padding */
+    width: 220px;
+    font: $font-small;
+  }
 }

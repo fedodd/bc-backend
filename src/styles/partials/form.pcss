@@ -10,6 +10,7 @@
 }
 
 .form-input {
+  margin-right: 10px;
   box-sizing: border-box;
   width: 276px;
   border: none;
@@ -17,8 +18,8 @@
   outline: none;
   font: $font-descrAlt;
   text-align: center;
-  color: rgba(255, 255, 255, .7);
-  background-color: $color-accent;
+  color: white;
+  background-color: transparent;
 
   @mixin respond-to desk {
     width: 230px;
@@ -28,6 +29,14 @@
     margin-bottom: 15px;
     padding: 15px 30px;
   }
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, .7);
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 
   .is__popup & {
