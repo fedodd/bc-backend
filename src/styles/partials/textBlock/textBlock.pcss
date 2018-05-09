@@ -91,7 +91,7 @@
 
 .textBlock-description {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 0;
   font: $font-descr;
   color: $color-greyText;
@@ -102,6 +102,11 @@
   }
 
   &:last-of-type {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
+
+    @mixin respond-to desk {
+      margin-bottom: 30px;
+    }
+
   }
 }
