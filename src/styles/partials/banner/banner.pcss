@@ -1,13 +1,13 @@
 .banner {
   position: relative;
-  width: 100%;
-  height: calc(100vh-$header-height);
-  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: calc(100vh-$header-height);
   color: white;
+  background-color: black;
 }
 
 .banner-sliders {
@@ -30,9 +30,9 @@
 }
 
 .banner-title {
-  font: $font-mainTitle;
   margin: 0;
   padding: 0;
+  font: $font-mainTitle;
   text-transform: uppercase;
   
   @media only screen and (max-width: $medium) {
@@ -60,10 +60,10 @@
 }
 
 .banner-text {
-  text-align: center;
   position: absolute;
   top: calc(50% + 20px);
   width: 100%;
+  text-align: center;
   transform: translateY(-50%);
 }
 

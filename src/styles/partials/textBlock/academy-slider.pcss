@@ -1,10 +1,10 @@
 .academy-sliderWrapper {
-  width: 50vw;
   position: relative;
-  overflow: hidden;
-  left: -120px;
   top: -20px;
+  left: -120px;
   z-index: -1;
+  overflow: hidden;
+  width: 50vw;
 }
 
 .academy-slider {
@@ -20,49 +20,49 @@
 }
 
 .academy-sliderItem {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .academy-textWrapper {
   position: relative;
-  left: 120px;
   top: -66px; /* высота строки заголовка */
+  left: 120px;
   width: 70%;
   opacity: 0;
 
-  .slick-active & {
-    opacity: 1;
+  @mixin respond-to desk {
+    top: -50px; /* высота строки заголовка */
   }
 
-  @media only screen and (max-width: 1280px) {
-    top: -50px; /* высота строки заголовка */
+  .slick-active & {
+    opacity: 1;
   }
   
 }
 
 .academy-mainTitle {
   margin: 0;
-  padding: 0;
-  font: $font-service;
-  color: white;
   margin-top: auto;
   margin-bottom: 30px;
+  padding: 0;
+  font: $font-service;
   text-transform: uppercase;
+  color: white;
 
-  @media only screen and (max-width: 1280px) {
-    font: $font-serviceSmall;
+  @mixin respond-to desk {
     margin-bottom: 20px;
+    font: $font-serviceSmall;
   }
 }
 
 .academy-descr {
   margin: 0;
   padding: 0;
-  color: $color-blue;
   font: $font-descrAlt;
+  color: $color-blue;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     font: $font-descrAltSmall;
   }
 }
@@ -74,9 +74,9 @@
 }
 
 .academy-sliderItem .academy-imgWrapper .academy-img {
-  width: 50vw;
   position: absolute;
-  height: 50vh;
   z-index: -1;
+  width: 50vw;
+  height: 50vh;
   background-size: cover;
 }

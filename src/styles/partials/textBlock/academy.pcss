@@ -1,23 +1,23 @@
 .academy {
   position: relative;
   z-index: 5;
-  height: 100%;
   padding: 40px 60px 70px $margin-holder;
   box-sizing: border-box;
+  height: 100%;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     padding: 50px 40px 50px 60px;
   }
 }
 
 .academy-title {
-  font: $font-altTitle;
   margin: 0;
   padding: 0;
-  color: $color-altTitle;
+  font: $font-altTitle;
   text-transform: uppercase;
+  color: $color-altTitle;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     font: $font-altTitleSmall;
   }
 }

@@ -4,50 +4,50 @@
 
   &.is__popup {
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 }
 
 .form-input {
   box-sizing: border-box;
+  width: 276px;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, .7);
+  outline: none;
   font: $font-descrAlt;
+  text-align: center;
   color: rgba(255, 255, 255, .7);
   background-color: $color-accent;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid rgba(255, 255, 255, .7);
-  text-align: center;
-  width: 276px;
 
-  .is__popup & {
-    margin-bottom: 20px;
-    padding: 20px 45px;
-  }
-
-  @media only screen and (max-width: 1280px) {
-    font: $font-descrAltSmall;
+  @mixin respond-to desk {
     width: 230px;
+    font: $font-descrAltSmall;
     
     .is__popup & {
     margin-bottom: 15px;
     padding: 15px 30px;
   }
   }
+
+  .is__popup & {
+    margin-bottom: 20px;
+    padding: 20px 45px;
+  }
 }
 
 .form-submit {
   margin-left: 20px;
 
-  .is__popup & {
-    margin-top: 20px;
-  }
-
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     margin-left: 15px;
 
     .is__popup & {
       margin-top: 15px;
     }
+  }
+
+  .is__popup & {
+    margin-top: 20px;
   }
 }

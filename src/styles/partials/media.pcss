@@ -1,64 +1,64 @@
 .media {
-  background-color: $color-bgrDark;
   margin: 0 auto;
   padding: 80px 0;
+  background-color: $color-bgrDark;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     padding: 60px 0;
   }
 }
 
 .media-holder {
-  width: 50%;
   margin: 0 auto;
+  width: 50%;
 }
 
 .media-title {
-  font: $font-service;
-  color: white;
-  text-align: center;
   margin: 0;
-  padding: 0;
   margin-bottom: 80px;
+  padding: 0;
+  font: $font-service;
+  text-align: center;
+  color: white;
 
-  @media only screen and (max-width: 1280px) {
-    font: $font-serviceSmall;
+  @mixin respond-to desk {
     margin-bottom: 40px;
+    font: $font-serviceSmall;
   }
 }
 
 .media-descr {
-  color: $color-grey;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
   font: $font-descr;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 60px;
+  color: $color-grey;
 
-  @media only screen and (max-width: 1280px) {
-    font: $font-descrSmall;
+  @mixin respond-to desk {
     margin-bottom: 40px;
+    font: $font-descrSmall;
   }
 }
 
 .media-labels {
-  width: 60%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .media-label {
   height: 72px;
-  &.is__small {
-    height: 50px;
-  }
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     height: 54px;
     &.is__small {
       height: 38px;
     }
+  }
+  &.is__small {
+    height: 50px;
   }
 }

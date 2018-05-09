@@ -1,47 +1,47 @@
 .button {
   display: inline-block;
   padding: 20px 45px;
-  background-color: $color-accent;
-  color: white;
-  font: $font-button;
-  text-transform: uppercase;
-  white-space: nowrap;
   box-sizing: border-box;
+  font: $font-button;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: white;
+  background-color: $color-accent;
+
+  @mixin respond-to desk {
+    padding: 15px 32px;
+    font: $font-buttonSmall;
+  }
   
   &.with__border {
     padding: 18px 43px;
     border: 2px solid rgba(255, 255, 255, .7);
 
-    @media only screen and (max-width: 1280px) {
+    @mixin respond-to desk {
       padding: 13px 30px;
     }
   }
 
   &:hover {
-    background-color: white;
-    color: $color-accent;
-    border: 2px solid $color-accent;
     cursor: pointer;
     padding: 18px 43px;
+    border: 2px solid $color-accent;
+    color: $color-accent;
+    background-color: white;
 
-    @media only screen and (max-width: 1280px) {
+    @mixin respond-to desk {
       padding: 13px 30px;
     }
   }
 
   &.is__alt:hover {
-    color: black;
-    border: none;
     padding: 20px 45px;
+    border: none;
+    color: black;
 
-    @media only screen and (max-width: 1280px) {
+    @mixin respond-to desk {
       padding: 15px 32px;
     }
-  }
-
-  @media only screen and (max-width: 1280px) {
-    font: $font-buttonSmall;
-    padding: 15px 32px;
   }
 }
 
@@ -64,9 +64,9 @@
   &.is__academy {
     float: right;
     &::after {
-      content: '';
       position: absolute;
       clear: both;
+      content: '';
     }
   }
 }

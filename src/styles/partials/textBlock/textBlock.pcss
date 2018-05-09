@@ -4,19 +4,19 @@
 }
 
 .textBlock-title {
-  z-index: 5;
-  font: $font-altTitle;
   position: absolute;
-  margin: 0;
-  margin-bottom: 65px;
   top: 40px;
   left: $margin-holder;
+  z-index: 5;
+  margin: 0;
+  margin-bottom: 65px;
   padding: 0;
-  color: $color-altTitle;
+  font: $font-altTitle;
   text-transform: uppercase;
   opacity: .75;
+  color: $color-altTitle;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     top: 30px;
     margin-bottom: 30px;
     font: $font-altTitleSmall;
@@ -31,8 +31,8 @@
   }
 
   .textBlock-wrapper.is__alt  & {
-    color: $color-black;
     position: static;
+    color: $color-black;
   }
 
   .map-russia & {
@@ -46,20 +46,20 @@
 }
 
 .textBlock-img {
-  height: 100%;
   width: 50%;
-  background-size: cover;
-  background-position: 0 0;
+  height: 100%;
   background-color: black;
+  background-position: 0 0;
+  background-size: cover;
 }
 
 .textBlock-content {
-  height: 100%;
-  width: 50%;
   padding: 70px 60px 70px 90px;
   box-sizing: border-box;
+  width: 50%;
+  height: 100%;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     padding: 50px 40px 50px 60px;
   }
 
@@ -77,28 +77,28 @@
 
 .textBlock-mainTitle {
   margin: 0;
+  margin-bottom: 50px;
   padding: 0;
   width: 80%;
   font: $font-title;
   text-transform: uppercase;
-  margin-bottom: 50px;
 
-  @media only screen and (max-width: 1280px) {
-    font: $font-titleSmall;
+  @mixin respond-to desk {
     margin-bottom: 35px;
+    font: $font-titleSmall;
   }
 }
 
 .textBlock-description {
   margin: 0;
-  padding: 0;
-  color: $color-greyText;
-  font: $font-descr;
   margin-bottom: 50px;
+  padding: 0;
+  font: $font-descr;
+  color: $color-greyText;
 
-  @media only screen and (max-width: 1280px) {
-    font: $font-descrSmall;
+  @mixin respond-to desk {
     margin-bottom: 20px;
+    font: $font-descrSmall;
   }
 
   &:last-of-type {

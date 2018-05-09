@@ -1,9 +1,9 @@
 .footer {
   padding: 80px 0;
-  color: $color-grey;
   font: $font;
+  color: $color-grey;
   
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     font: $font-small;
   }
 }
@@ -17,8 +17,8 @@
   width: 116px;
   
   &:hover {
-    opacity: .5;
     cursor: pointer;
+    opacity: .5;
   }
 }
 
@@ -32,8 +32,8 @@
 
 .footer-contacts {
   display: block;
-  color: $color-grey;
   font-weight: bold;
+  color: $color-grey;
 
   &:hover,
   &:visited {
@@ -48,13 +48,13 @@
 .footer-project {
 
   &:hover {
-    opacity: .5;
     cursor: pointer;
+    opacity: .5;
   }
 
   &.is__lite {
-    width: 106px;
     margin-right: 50px;
+    width: 106px;
   }
 
   &.is__cross {

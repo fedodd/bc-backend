@@ -1,8 +1,8 @@
 .priceShedule {
   position: relative;
   z-index: 15;
-  background-color: $color-lightGrey;
   padding: 20px 0 40px;
+  background-color: $color-lightGrey;
 }
 
 .priceList-wrapper {
@@ -10,49 +10,20 @@
 }
 
 .priceList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .priceList-item {
-  margin: 0;
   position: relative;
+  margin: 0;
   padding: 30px 0 45px 60px;
   box-sizing: border-box;
   border-right: 2px solid $color-border;
   border-bottom: 2px solid $color-border;
-
-  &:hover {
-    cursor: pointer;
-    opacity: .5;
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: -26px;
-    bottom: -26px;
-    width: 50px;
-    height: 50px;
-    background-color: $color-lightGrey;
-    z-index: 20;
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -26px;
-    bottom: -26px;
-    width: 50px;
-    height: 50px;
-    background-color: $color-lightGrey;
-    z-index: 20;
-  }
 
   @media only screen and (min-width: 1024px) {
     padding: 20px 0 30px 40px;
@@ -86,27 +57,57 @@
       border-bottom: none;
     }
   }
+
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+    background-color: green;
+  }
+
+  &::after {
+    position: absolute;
+    right: -26px;
+    bottom: -26px;
+    z-index: 20;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $color-lightGrey;
+    content: '';
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -26px;
+    left: -26px;
+    z-index: 20;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $color-lightGrey;
+    content: '';
+  }
 }
 
 .priceList-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font: $font-descrAlt;
   white-space: nowrap;
   color: $color-blue;
-  font: $font-descrAlt;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     font: $font-descrAltSmall;
   }
 }
 
 .priceList-price {
-  font: $font-price;
   margin: 0;
   padding: 0;
+  font: $font-price;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     font: $font-priceSmall;
   }
 }

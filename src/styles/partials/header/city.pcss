@@ -1,12 +1,12 @@
 .cityBlock-wrapper {
   position: absolute;
-  color: white;
   top: 0;
   left: -10000px;
-  height: 100%;
   width: 100%;
-  transition: .3s;
+  height: 100%;
+  color: white;
   background-color: black;
+  transition: .3s;
 
   &.is__active {
     left: 0;
@@ -15,20 +15,20 @@
 
 .cityBlock-holder {
   position: relative;
-  width: auto;
-  height: inherit;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: auto;
+  height: inherit;
 }
 
 .city-list {
   position: relative;
-  padding: 0;
   margin: 0;
-  table-layout: fixed;
-  width: auto;
   margin-left: 100px;
+  padding: 0;
+  width: auto;
+  table-layout: fixed;
   border-spacing: 60px 20px;
   white-space: nowrap;
 
@@ -48,8 +48,8 @@
 }
 
 .city-link {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 
   &:hover,
   &:visited {
@@ -69,29 +69,29 @@
 
 .cityActive-wrapper {
   position: absolute;
-  box-sizing: border-box;
+  bottom: -60px;
+  left: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: -60px;
-  left: -20px;
-  height: 60px;
-  width: 260px;
   padding: 0 $margin-holder 0 80px;
-  transition: 0.3s;
+  box-sizing: border-box;
+  width: 260px;
+  height: 60px;
   background-color: white;
+  transition: 0.3s;
 
   @media only screen and (max-width: $medium) {
+    bottom: -40px;
     padding: 0 30px 0 50px;
     height: 40px;
-    bottom: -40px;
   }
   
   &.is__moving {
-    z-index: 20;
     left: -10000px;
-    background-color: black;
+    z-index: 20;
     color: $color-accent;
+    background-color: black;
 
     &.is__active {
       left: 0;
@@ -101,13 +101,13 @@
 
 
 .cityActive-title {
-  transform: skew(20deg);
   display: inline-block;
   padding-bottom: 10px;
+  transform: skew(20deg);
 }
 
 .cityActive-mapmarker {
+  padding-right: 10px;
   font-family: 'WebSymbolsLiga';
-  color: red;
-  padding-right: 10px; 
+  color: red; 
 }

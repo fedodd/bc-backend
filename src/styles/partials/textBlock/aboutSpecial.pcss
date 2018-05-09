@@ -1,12 +1,12 @@
 .aboutSpecial {
-  background-color: $color-accent;
-  font: $font-text;
-  color: white;
-  text-align: center;
   position: relative;
   z-index: -2;
+  font: $font-text;
+  text-align: center;
+  color: white;
+  background-color: $color-accent;
 
-  @media only screen and (max-width: 1280px) {
+  @mixin respond-to desk {
     font: $font-textSmall;
   }
 }
@@ -17,15 +17,15 @@
 }
 
 .aboutSpecial-text {
-  width: 55%;
   margin: 0 auto;
+  width: 55%;
 }
 
 .aboutSpecial-img {
   position: absolute;
-  z-index: -1;
   top: 25px;
   right: 0;
+  z-index: -1;
   width: 270px;
   height: 536px;
   background-image: url('./../img/a_thing_1.svg');

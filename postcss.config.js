@@ -4,10 +4,10 @@ module.exports = {
       extensions: ['.css', '.pcss']
     },
     'postcss-mixins': {},
-    'postcss-simple-vars': {},
-    'postcss-cssnext': {},
     'postcss-nested': {},
     'postcss-conditionals': {},
+    'postcss-simple-vars': {},
+    'postcss-cssnext': {},
     'cssnano': {}
   }
 };

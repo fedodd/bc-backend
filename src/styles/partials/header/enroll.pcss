@@ -1,6 +1,6 @@
 .enroll {
-  height: $header-height;
   overflow: hidden;
+  height: $header-height;
   
   @media only screen and (max-width: $medium) {
     height: $header-heightSmall;
@@ -8,22 +8,17 @@
 }
 
 .enroll-wrapper {
-  height: 100%;
-  padding: 0 $margin-holder;
-  padding-bottom: $header-height;
-  background-color: $color-accent;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 $margin-holder;
+  padding-bottom: $header-height;
+  height: 100%;
   color: white;
-  transition: .3s;
+  background-color: $color-accent;
   background-color: black;
   background-image: linear-gradient( $color-accent 50%, transparent 50%);
-
-  &:hover {
-    cursor: pointer;
-    background-position-y: $header-height;
-  }
+  transition: .3s;
 
   @media only screen and (max-width: $medium) {
     padding: 0 30px;
@@ -32,6 +27,11 @@
     &:hover {
       background-position-y: $header-heightSmall;
     }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-position-y: $header-height;
   }
 }
 
