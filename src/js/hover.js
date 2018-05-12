@@ -1,7 +1,15 @@
-/* export default (hoverItem, hoverBlock) => {
+let hoverBlock = document.querySelectorAll('.priceList-item');
+let serviceBlock = document.querySelectorAll('.service-slider');
+/* export default (hoverBlock1, serviceBlock1) => {
   const hoverFunc = () => {
-    hoverBlock.map(elem => document.getElementById(elem).classList.toggle('is__active'));
+    serviceBlock1[0].classList.toggle('is__active');
+    hoverBlock1p[0].classList.toggle('is__active');
   };
-  document.getElementById(hoverItem).addEventListener('hover', hoverFunc);
-};
+  hoverBlock1[0].addEventListener('hover', hoverFunc());
+}; */
+
+/* export default hoverBlock[0].addEventListener('mouseover', function (event) {
+  const target1 = hoverBlock[0]
+  event.target1.classList.toggle('is__active');
+});
  */

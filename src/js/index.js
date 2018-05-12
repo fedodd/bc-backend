@@ -1,6 +1,6 @@
 import toggle from './toggle';
 import mapRussia from './mapRussia';
-/* import hover from './hover'; */
+import hover from './hover';
 
 const headerToggleBlock = ['cityBlock-wrapper', 'cityActive', 'cityActiveWrapper'];
 

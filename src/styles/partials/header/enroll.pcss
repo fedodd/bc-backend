@@ -2,9 +2,9 @@
   overflow: hidden;
   height: $header-height;
   
-  @media only screen and (max-width: $medium) {
+/*   @mixin respond-to desk {
     height: $header-heightSmall;
-  }
+  } */
 }
 
 .enroll-wrapper {
@@ -20,7 +20,7 @@
   background-image: linear-gradient( $color-accent 50%, transparent 50%);
   transition: .3s;
 
-  @media only screen and (max-width: $medium) {
+  @mixin respond-to desk {
     padding: 0 30px;
     padding-bottom: $header-heightSmall;
 
