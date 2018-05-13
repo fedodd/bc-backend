@@ -1,15 +1,26 @@
-let hoverBlock = document.querySelectorAll('.priceList-item');
-let serviceBlock = document.querySelectorAll('.service-slider');
-/* export default (hoverBlock1, serviceBlock1) => {
-  const hoverFunc = () => {
-    serviceBlock1[0].classList.toggle('is__active');
-    hoverBlock1p[0].classList.toggle('is__active');
-  };
-  hoverBlock1[0].addEventListener('hover', hoverFunc());
-}; */
+const toggleFunc1 = (elem) => {
+  elem.classList.add('is__active');
+};
 
-/* export default hoverBlock[0].addEventListener('mouseover', function (event) {
-  const target1 = hoverBlock[0]
-  event.target1.classList.toggle('is__active');
-});
- */
+const toggleFunc2 = (elem) => {
+  elem.classList.remove('is__active');
+};
+
+const hoverList = document.querySelectorAll('.priceList-item');
+const serviceList = document.querySelectorAll('.service-slider');
+const FirstService = document.getElementById('firstService');
+const serviceSliderBlock = document.getElementById('serviceSliderBlock');
+
+const firstActivate = () => FirstService.classList.toggle('is__active');
+
+export default () => {
+  serviceSliderBlock.addEventListener('mouseout', firstActivate);
+  for (let i = 0; i < hoverList.length; i++) {
+    const button = hoverList[i];
+    const service = serviceList[i];
+    const toggleFuncAdd = () => toggleFunc1(service);
+    const toggleFuncDelete = () => toggleFunc2(service);
+    button.addEventListener('mouseover', toggleFuncAdd, false);
+    button.addEventListener('mouseout', toggleFuncDelete, false);
+  }
+};

@@ -1,18 +1,27 @@
-import toggle from './toggle';
+import mytoggle from './toggle';
 import mapRussia from './mapRussia';
-import hover from './hover';
+import serviceHover from './hover';
 
-const headerToggleBlock = ['cityBlock-wrapper', 'cityActive', 'cityActiveWrapper'];
+/* service */
+/* const hoverBlockNode = document.querySelectorAll('.priceList-item');
+const serviceBlockNode = document.querySelectorAll('.service-slider');
+
+/* serviceHover(hoverBlockNode); */
+/* serviceHover(); */
+
+serviceHover();
+
 
 /* toggle header */
-toggle('cityActive', headerToggleBlock);
-toggle('cityClose', headerToggleBlock);
+const headerToggleBlock = ['cityBlock-wrapper', 'cityActive', 'cityActiveWrapper'];
+
+mytoggle('cityActive', headerToggleBlock);
+mytoggle('cityClose', headerToggleBlock);
 
 /* toggle academy popup */
 const academyToggleBlock = ['academyPopup', 'academyPopupBtn', 'academySliderDots', 'academySlider'];
-toggle('academyPopupBtn', academyToggleBlock);
-toggle('academyPopupClose', academyToggleBlock);
-
+mytoggle('academyPopupBtn', academyToggleBlock);
+mytoggle('academyPopupClose', academyToggleBlock);
 
 /* slick sliders */
 
