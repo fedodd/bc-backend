@@ -25,12 +25,19 @@
   transition: .3s;
 
 
-  @media only screen and (min-width: 1024px) {
+  @mixin respond-to medium {
     padding: 20px 0 30px 40px;
     width: 25%;
 
     &:nth-child(4n+1) {
       padding-left: 35px;
+    }
+  }
+
+  @mixin respond-to medium {
+    &:nth-child(4n)::before,
+    &:nth-last-child(-n+4)::after {
+      display: none;
     }
   }
 
@@ -43,13 +50,6 @@
 
     &:nth-child(even)::before,
     &:nth-last-child(-n+2)::after {
-      display: none;
-    }
-  }
-
-  @media only screen and (min-width: 1024px) {
-    &:nth-child(4n)::before,
-    &:nth-last-child(-n+4)::after {
       display: none;
     }
   }

@@ -1,11 +1,15 @@
 .service {
   position: relative;
-  height: 600px;
+  height: calc(100vh - 375px); /* 375 - высота списка услуг без паддингов */
   color: white;
   background-color: $color-dark;
 
   @mixin respond-to desk {
-    height: 500px;
+    height: calc(100vh - 335px); /* 335 - высота списка услуг + сниженный топ */
+  }
+
+  @mixin respond-to large {
+    max-height: 600px;
   }
 }
 
@@ -15,7 +19,7 @@
   left: 50%;
   z-index: 2;
   width: 48vw;
-  height: 65vh;
+  height: 80%;
   transform: translateX(-50%);
 
   @mixin respond-to desk {
@@ -37,8 +41,12 @@
 
 .service-textBlock {
   position: relative;
-  top: -50px; /* высота строки */
-  width: 60%;
+  top: -66px; /* высота строки */
+  width: 70%;
+
+  @mixin respond-to desk {
+    top: -50px; /* высота строки */
+  }
 }
 
 .service-title {

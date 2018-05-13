@@ -13,3 +13,27 @@ const academyToggleBlock = ['academyPopup', 'academyPopupBtn', 'academySliderDot
 toggle('academyPopupBtn', academyToggleBlock);
 toggle('academyPopupClose', academyToggleBlock);
 
+
+/* slick sliders */
+
+$(document).ready(function () {
+  $('.banner-sliders').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    pauseOnHover: false,
+    pauseOnDotsHover: true,
+    dotsClass: 'slider-dots'
+  });
+});
+$(document).ready(function () {
+  $('.academy-slider').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    pauseOnDotsHover: true,
+    dotsClass: 'slider-dots is__alt academySlider-dots'
+  });
+});
