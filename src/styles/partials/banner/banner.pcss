@@ -44,9 +44,13 @@
   white-space: pre-line;
   text-transform: uppercase;
   
-  @media only screen and (max-width: $medium) {
+  @mixin respond-to desk {
     font-size: 90px;
     line-height: 92px;
+  }
+
+  @mixin respond-to medium {
+    font: $font-mainTitleMobile;
   }
 }
 
@@ -75,10 +79,15 @@
 .banner-text {
   position: absolute;
   top: calc(50% + 20px);
+  margin: 0 $margin-holder;
   width: 100%;
   text-align: center;
   white-space: pre-line;
   transform: translateY(-50%);
+
+  @mixin respond-to medium {
+    margin: 0 $margin-holderMobile;
+  }
 }
 
 .banner-subtitle {
@@ -87,7 +96,11 @@
   font: $font-subtitle;
   white-space: pre-line;
 
-  @media only screen and (max-width: $medium) {
+  @mixin respond-to desk {
     font: $font-subtitleSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-subtitleMobile;
   }
 }

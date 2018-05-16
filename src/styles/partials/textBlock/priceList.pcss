@@ -33,7 +33,7 @@
   }
 
 
-  @mixin respond-to medium {
+  @mixin respond-to desk {
     padding: 20px 0 30px 40px;
     width: 25%;
 
@@ -42,14 +42,14 @@
     }
   }
 
-  @mixin respond-to medium {
+  @mixin respond-to desk {
     &:nth-child(4n)::before,
     &:nth-last-child(-n+4)::after {
       display: none;
     }
   }
 
-  @media only screen and (max-width: 1024px) { 
+  @mixin respond-to medium { 
     width: 50%;
 
     &:nth-child(2n+1) {

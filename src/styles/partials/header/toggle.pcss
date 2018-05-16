@@ -1,0 +1,75 @@
+.header-toggleHolder {
+  position: absolute;
+  top: 0;
+  right: $margin-holderMobile;
+  z-index: 102;
+  padding: 5px;
+  width: $size-toggleWidth;
+  height: 20px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header-toggleBlock {
+  position: relative; 
+  width: $size-toggleWidth;
+  height: 20px;
+}
+
+.header-toggle {
+  position: absolute;
+  top: 8px;
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+}
+
+.header-toggle span {
+  position: absolute;
+  display: block;
+  width: $size-toggleWidth;
+  height: 1px;
+  background: white;
+
+  &::after,
+  &::before {
+    position: absolute;
+    display: block;
+    width: $size-toggleWidth;
+    height: 1px;
+    background: white;
+    content: '';
+  }
+}
+
+.header-toggle span:before {
+  top: -7px;
+}
+.header-toggle span:after {
+  bottom: -7px;
+}
+
+/* Добавим анимацию всех свойств для блоков нашей иконки */
+.header-toggle span, .header-toggle span:before, .header-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+
+/* Центральный блок делаем прозрачным */
+.header-toggle.is__active span {
+  background-color: transparent;
+}
+
+/* Смещаем псевдо-элементы в центр иконки (на место основного блока) */
+.header-toggle.is__active span:before, .header-toggle.is__active span:after {
+  top: 0;
+}
+
+/* Наклоняем псевдо-элементы под углом 45 градусов, но в разные стороны */
+.header-toggle.is__active span:before {
+  transform: rotate(-45deg);
+}
+.header-toggle.is__active span:after {
+  transform: rotate(45deg);
+}

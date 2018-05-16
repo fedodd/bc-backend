@@ -11,4 +11,8 @@ html, body {
 
 .holder {
   margin: 0 $margin-holder;
+
+  @mixin respond-to medium {
+    margin: 0 $margin-holderMobile;
+  }
 }

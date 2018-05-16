@@ -9,16 +9,28 @@
   @mixin respond-to desk {
     font: $font-textSmall;
   }
+
+  @mixin respond-to medium {
+    font: $font-textMobile;
+  }
 }
 
 .aboutSpecial-holder {
   position: relative;
   padding: 90px 0;
+
+  @mixin respond-to medium {
+    padding: 60px 0;
+  } 
 }
 
 .aboutSpecial-text {
   margin: 0 auto;
   width: 55%;
+
+  @mixin respond-to medium {
+    width: 100%;
+  }
 }
 
 .aboutSpecial-img {
@@ -29,4 +41,9 @@
   width: 270px;
   height: 536px;
   background-image: url('./../img/a_thing_1.svg');
+
+  @mixin respond-to medium {
+    width: 172px;
+    height: 373px;
+  }
 }

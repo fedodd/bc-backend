@@ -11,8 +11,15 @@ const serviceBlockNode = document.querySelectorAll('.service-slider');
 
 serviceHover();
 
+/* toggle header Mobile */
 
-/* toggle header */
+mytoggle('headerToggleBlock', ['headerMobileToggle', 'headerToggle']);
+const headerToggleBlockMobile = ['cityBlock-wrapperMobile', 'cityActiveMobile'];
+
+mytoggle('cityActiveMobile', headerToggleBlockMobile);
+mytoggle('cityCloseMobile', headerToggleBlockMobile);
+
+/* toggle city header */
 const headerToggleBlock = ['cityBlock-wrapper', 'cityActive', 'cityActiveWrapper'];
 
 mytoggle('cityActive', headerToggleBlock);
@@ -30,7 +37,7 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     pauseOnHover: false,
     pauseOnDotsHover: true,
     dotsClass: 'slider-dots'
@@ -41,7 +48,7 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     pauseOnDotsHover: true,
     dotsClass: 'slider-dots is__alt academySlider-dots'
   });

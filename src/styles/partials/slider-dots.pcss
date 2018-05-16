@@ -27,6 +27,12 @@
   border-radius: 50%;
   opacity: .5;
   transition: $time;
+
+  @mixin respond-to medium {
+    margin: 0 8px;
+    width: 16px;
+    height: 16px;
+  }
   
   &::after {
     position: absolute;
@@ -35,6 +41,11 @@
     border-radius: 50%;
     background-color: white;
     content: '';
+
+    @mixin respond-to medium {
+      width: 8px;
+      height: 8px;
+    }
   }
 
   &:hover {

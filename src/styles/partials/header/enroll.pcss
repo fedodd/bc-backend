@@ -5,6 +5,14 @@
 /*   @mixin respond-to desk {
     height: $header-heightSmall;
   } */
+
+  &.is__mobile {
+    height: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .enroll-wrapper {
@@ -20,6 +28,11 @@
   background-image: linear-gradient( $color-accent 50%, transparent 50%);
   transition: .3s;
 
+  @mixin respond-to medium {
+    padding: 0;
+    background-color: transparent;
+  }
+
   @mixin respond-to desk {
     padding: 0 30px;
     padding-bottom: $header-heightSmall;
@@ -30,7 +43,6 @@
   }
 
   &:hover {
-    cursor: pointer;
     background-position-y: $header-height;
   }
 }

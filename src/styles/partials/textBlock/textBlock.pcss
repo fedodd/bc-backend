@@ -22,6 +22,11 @@
     font: $font-altTitleSmall;
   }
 
+  @mixin respond-to medium {
+    left: $margin-holderMobile;
+    font: $font-altTitleMobile;
+  }
+
   &.is__fullColour {
     opacity: 1;
   }
@@ -40,7 +45,7 @@
   }
 
   &.is__smallMargin {
-     @media only screen and (min-width: 1280px)  {
+     @mixin respond-to large  {
       margin-bottom: 0;
     }
   }
@@ -48,7 +53,16 @@
 
 .textBlock-wrapper {
   display: flex;
+  flex-direction: column;
   height: 100vh;
+
+  @mixin respond-to desk {
+    flex-direction: row;
+  }
+
+  &.is__reverse {
+      flex-direction: column-reverse;
+  }
 }
 
 .textBlock-img {
@@ -57,6 +71,11 @@
   background-color: black;
   background-position: 0 0;
   background-size: cover;
+
+  @mixin respond-to medium {
+    width: 100%;
+    height: 35vh;
+  }
 }
 
 .textBlock-content {
@@ -67,6 +86,12 @@
 
   @mixin respond-to desk {
     padding: 50px 40px 50px 60px;
+  }
+
+  @mixin respond-to medium {
+    padding: 20px $margin-holderMobile 10px;
+    width: 100%;
+    height: 65vh;
   }
 
   &.is__alt {
@@ -93,6 +118,11 @@
     margin-bottom: 35px;
     font: $font-titleSmall;
   }
+
+  @mixin respond-to desk {
+    margin-bottom: 30px;
+    font: $font-titleMobile;
+  }
 }
 
 .textBlock-description {
@@ -107,10 +137,13 @@
     margin-bottom: 20px;
   }
 
-  @media only screen and (max-width: 1200px) {
+  @mixin respond-to middle{
     font: $font-descrSmall;
   }
-  
+
+  @mixin respond-to medium {
+    font: $font-descrMobile;
+  }
 
   &:last-of-type {
     margin-bottom: 50px;

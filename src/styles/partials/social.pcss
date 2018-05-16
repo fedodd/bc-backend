@@ -47,13 +47,26 @@
     @mixin respond-to desk {
       vertical-align: text-top;
     }
+
+    .header-mobileIcons & {
+      width: 21px;
+      vertical-align: baseline;
+    }
   }
 
   &.is__fb {
     width: 11px;
+    
+    .header-mobileIcons & {
+      width: 9px;
+    }
   }
 
   &.is__inst {
     width: 18px;
+
+    .header-mobileIcons & {
+      width: 16px;
+    }
   }
 }
