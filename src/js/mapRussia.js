@@ -2,7 +2,7 @@ var zoneOverlay;
 
 window.initMap = function () {
   let mapMoscow;
-  let uluru = { lat: 55.755826, lng: 37.6173 };
+  let uluru = { lat: 55.6526, lng: 37.6173 };
   mapMoscow = new google.maps.Map(document.getElementById('mapMoscow'), {
     center: uluru,
     zoom: 10.5,

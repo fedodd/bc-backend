@@ -2,6 +2,12 @@
   display: flex;
   justify-content: space-around;
 
+  @mixin respond-to medium {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   &.is__popup {
     flex-direction: column;
     justify-content: center;
@@ -26,9 +32,13 @@
     font: $font-descrAltSmall;
     
     .is__popup & {
-    margin-bottom: 15px;
-    padding: 15px 30px;
+      margin-bottom: 15px;
+      padding: 15px 30px;
+    }
   }
+
+  @mixin respond-to medium {
+    margin-bottom: 40px;
   }
 
   &::placeholder {
@@ -46,7 +56,7 @@
 }
 
 .form-submit {
-  margin-left: 20px;
+  margin: 0;
 
   @mixin respond-to desk {
     margin-left: 15px;
@@ -54,6 +64,10 @@
     .is__popup & {
       margin-top: 15px;
     }
+  }
+
+  @mixin respond-to large {
+    margin-left: 20px;
   }
 
   .is__popup & {

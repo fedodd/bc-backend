@@ -37,7 +37,7 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: false,
     pauseOnDotsHover: true,
     dotsClass: 'slider-dots'
@@ -48,7 +48,7 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     pauseOnDotsHover: true,
     dotsClass: 'slider-dots is__alt academySlider-dots'
   });

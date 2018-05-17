@@ -79,14 +79,15 @@
 .banner-text {
   position: absolute;
   top: calc(50% + 20px);
-  margin: 0 $margin-holder;
+  padding: 0 $margin-holder;
+  box-sizing: border-box;
   width: 100%;
   text-align: center;
   white-space: pre-line;
   transform: translateY(-50%);
 
   @mixin respond-to medium {
-    margin: 0 $margin-holderMobile;
+    padding: 0 $margin-holderMobile;
   }
 }
 

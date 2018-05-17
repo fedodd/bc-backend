@@ -10,6 +10,10 @@
 .social-item {
   margin-left: 30px;
 
+  @mixin respond-to medium {
+    margin-left: 0;
+  }
+
   &:first-child {
     margin-left: 0;
   }
@@ -18,12 +22,22 @@
     cursor: pointer;
     opacity: .5;
   }
+  &:last-child {
+  @mixin respond-to medium {
+    padding-right: 5vw;
+    }
+  }
 }
 
 .social-title {
   margin-left: 15px;
 
   @mixin respond-to desk {
+    vertical-align: text-bottom;
+  }
+
+  @mixin respond-to medium {
+    margin-left: 5px;
     vertical-align: text-bottom;
   }
 }

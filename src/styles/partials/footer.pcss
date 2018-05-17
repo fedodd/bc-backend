@@ -6,15 +6,29 @@
   @mixin respond-to desk {
     font: $font-small;
   }
+
+  @mixin respond-to medium {
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .footer-holder {
   display: flex;
   justify-content: space-between;
+
+  @mixin respond-to medium {
+    flex-direction: column;
+  }
 }
 
 .footer-logo {
   width: 116px;
+
+  @mixin respond-to medium {
+    display: none;
+  }
   
   &:hover {
     cursor: pointer;
@@ -28,6 +42,12 @@
 
 .footer-join {
   margin-right: 60px;
+  @mixin respond-to medium {
+    margin-right: calc(15vw  -20px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .footer-contacts {
@@ -38,6 +58,14 @@
   &:hover,
   &:visited {
     color: $color-grey;
+  }
+}
+
+.footer-projects {
+  @mixin respond-to medium {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -55,9 +83,21 @@
   &.is__lite {
     margin-right: 50px;
     width: 106px;
+    @mixin respond-to medium {
+      margin-right: 30px;
+      width: 82px;
+    }
   }
 
   &.is__cross {
     width: 60px;
+      @mixin respond-to medium {
+      width: 45px;
+    }
   }
+}
+
+.footer-descr.is__special {
+  display: block;
+  margin-right: 15vw;
 }

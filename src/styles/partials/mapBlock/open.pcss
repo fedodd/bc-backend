@@ -1,12 +1,12 @@
 .open {
   position: absolute;
   bottom: 0;
-  padding: 50px 0 60px 0;
+  padding: 30px 0;
   width: 100%;
   background-color: rgba(238, 54, 36, .9);
   
-  @mixin respond-to desk {
-    padding: 30px 0;
+  @mixin respond-to large {
+    padding: 50px 0 60px 0;
   }
 }
 
@@ -21,5 +21,10 @@
   @mixin respond-to desk {
     margin: 0 0 30px;
     font: $font-serviceSmall;
+  }
+
+  @mixin respond-to medium {
+    margin: 0 0 30px;
+    font: $font-serviceMobile;
   }
 }

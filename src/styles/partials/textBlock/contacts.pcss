@@ -8,10 +8,18 @@
   @mixin respond-to desk {
     font: $font-descrSmall;
   }
+
+  @mixin respond-to medium {
+    font: $font-descrMobile;
+  }
 }
 
 .adressList-item {
   margin-bottom: 40px;
+
+  @mixin respond-to medium {
+    margin-bottom: 20px;
+  }
 }
 
 .adressList-name {
@@ -37,6 +45,10 @@
 
   @mixin respond-to desk {
     font: $font-descrSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-descrMobile;
   }
   
   &:hover {

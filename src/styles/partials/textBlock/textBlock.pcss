@@ -38,6 +38,12 @@
   .textBlock-wrapper.is__alt  & {
     position: static;
     color: $color-black;
+
+    @mixin respond-to medium {
+      position: absolute;
+      opacity: .75;
+      color: $color-altTitle;
+    }
   }
 
   .mapBlock.is__Russia & {
@@ -60,8 +66,14 @@
     flex-direction: row;
   }
 
-  &.is__reverse {
+  @mixin respond-to medium {
+    &.is__reverse {
       flex-direction: column-reverse;
+    }
+
+    &.is__academy {
+      height: auto;
+    }
   }
 }
 
@@ -75,6 +87,12 @@
   @mixin respond-to medium {
     width: 100%;
     height: 35vh;
+    background-position: 0% 70%;
+
+    &.is__academy {
+      height: 420px; 
+      background-color: transparent;
+    }
   }
 }
 
@@ -92,6 +110,18 @@
     padding: 20px $margin-holderMobile 10px;
     width: 100%;
     height: 65vh;
+
+    &.is__long {
+      min-height: 65vh;
+    }
+
+    &.is__academy {
+      padding-top: 0;
+    }
+
+/*     &.is__scroll {
+      overflow-y: scroll;
+    } */
   }
 
   &.is__alt {
@@ -103,6 +133,10 @@
   .textBlock-wrapper.is__alt  & {
     padding-top: 40px;
     padding-left: $margin-holder;
+
+    @mixin respond-to medium {
+      padding: 20px $margin-holderMobile 10px;
+    }
   }
 }
 
@@ -119,7 +153,7 @@
     font: $font-titleSmall;
   }
 
-  @mixin respond-to desk {
+  @mixin respond-to medium {
     margin-bottom: 30px;
     font: $font-titleMobile;
   }
@@ -149,6 +183,10 @@
     margin-bottom: 50px;
 
     @mixin respond-to desk {
+      margin-bottom: 30px;
+    }
+
+    @mixin respond-to medium {
       margin-bottom: 30px;
     }
   }
