@@ -36,8 +36,46 @@ window.initMap = function () {
   zoneOverlay = new google.maps.GroundOverlay(
     './../img/mapZone.svg',
     imageBounds);
-  zoneOverlay.setMap(mapMoscow);
+/*   zoneOverlay.setMap(mapMoscow); */
  
+  var outerCoords = [
+    { lat: 57.183603, lng: 37.150727 },
+    { lat: 54, lng: 33},
+    { lat: 54, lng: 41 }
+  ];
+
+  // Define the LatLng coordinates for the polygon's inner path.
+  // Note that the points forming the inner path are wound in the
+  // opposite direction to those in the outer path, to form the hole.
+  function circlePath(center, radius, points) {
+    var a = [], p = 360 / points, d = 0;
+    for (var i = 0; i < points; ++i, d += p) {
+      a.push(google.maps.geometry.spherical.computeOffset(center, radius, d));
+    }
+    return a;
+  }
+  var center = new google.maps.LatLng({
+    lat: 55.7493,
+    lng: 37.618704
+  });
+  var innerCoords = circlePath(center, 5300, 360).map(point => ({
+    lat: point.lat(),
+    lng: point.lng()
+  }));
+
+  // Construct the polygon, including both paths.
+  var bermudaTriangle = new google.maps.Polygon({
+    paths: [outerCoords, innerCoords],
+    strokeColor: 'red',
+    strokeOpacity: 0.8,
+    strokeWeight: 0,
+    fillColor: 'red',
+    fillOpacity: 0.2
+  });
+  bermudaTriangle.setMap(mapMoscow);
+
+
+
   let mapRussia;
   mapRussia = new google.maps.Map(document.getElementById('mapRussia'), {
     center: { lat: 52.5, lng: 93.51359 },
