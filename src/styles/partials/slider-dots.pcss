@@ -1,0 +1,68 @@
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @mixin respond-to desk {
+    bottom: 10px;
+  }
+
+  &.is__alt {
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    margin: 0;
+    padding: 0;
+    transform: none;
+
+    @mixin respond-to medium {
+      top: 31vh;
+      bottom: unset;
+    }
+  }
+}
+
+.slider-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: .5;
+  transition: $time;
+
+  @mixin respond-to medium {
+    margin: 0 8px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  &::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    content: '';
+
+    @mixin respond-to medium {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  &.slick-active {
+    opacity: 1;
+  }
+
+  & button {
+    display: none;
+  }
+}

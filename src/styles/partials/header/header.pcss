@@ -1,0 +1,94 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: $header-height;
+  font: $font;
+  color: $color-black;
+
+  @mixin respond-to desk {
+    height: $header-heightSmall;
+    font: $font-small;
+  }
+
+  @mixin respond-to medium {
+    position: absolute;
+    z-index: 1000;
+  }
+}
+
+.header-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  @mixin respond-to medium {
+    display: none;
+  }
+
+  &.holder {
+    margin-right: 0;
+  }
+
+  &.is__mobile {
+    display: none;
+    overflow: hidden;
+    color: white;
+
+    @mixin respond-to medium {
+      display: flex;
+    }
+  }
+}
+
+.header-mobileRow {
+  position: relative;
+  width: 100%;
+}
+
+.header-mobileWrapper {
+  position: absolute;
+  top: -10000px;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $margin-holderMobile;
+  padding-bottom: 10vh;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-accent;
+
+  &.is__active {
+    top: 0;
+  }
+}
+
+.header-logoWrapper.is__mobile {
+  width: 100%;
+  text-align: center;
+}
+
+.header-logo {
+  width: 116px;
+}
+
+.header-mobileIcons {
+  display: flex;
+  align-items: center;
+  opacity: .7;
+}
+
+.header-img {
+  position: absolute;
+  top: 30%;
+  right: $margin-holderMobile;
+  z-index: -1;
+  width: 60vw;
+  height: 50vh;
+  background-image: url('./../img/a_thing_1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

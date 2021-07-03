@@ -1,0 +1,99 @@
+.button {
+  display: inline-block;
+  padding: 20px 45px;
+  box-sizing: border-box;
+  font: $font-button;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: white;
+  background-color: $color-accent;
+
+  @mixin respond-to desk {
+    padding: 15px 32px;
+    font: $font-buttonSmall;
+  }
+  
+  @mixin respond-to medium {
+    padding: 14px 30px;
+    font: $font-buttonSmall;
+
+    &.form-submit.with__border {
+      padding: 12px 28px;
+    }
+  }
+
+  &.with__border {
+    padding: 18px 43px;
+    border: 2px solid rgba(255, 255, 255, .7);
+
+    @mixin respond-to desk {
+      padding: 13px 30px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    padding: 18px 43px;
+    border: 2px solid $color-accent;
+    color: $color-accent;
+    background-color: white;
+
+    @mixin respond-to desk {
+      padding: 13px 30px;
+    }
+
+    @mixin respond-to medium {
+      padding: 12px 28px;
+    }
+  }
+
+  &.is__alt {
+    @mixin respond-to medium {
+      padding: 14px 30px;
+    }
+  }
+
+  &.is__alt:hover {
+    padding: 20px 45px;
+    border: none;
+    color: black;
+
+    @mixin respond-to desk {
+      padding: 15px 32px;
+    }
+
+    @mixin respond-to medium {
+      padding: 12px 28px;
+    }
+  }
+}
+
+.button-wrapper {
+  margin: 0 auto;
+
+  &.is__positioned {
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  &.is__alt {
+    margin: 0;
+  }
+
+  .textBlock-wrapper.is__alt & {
+    margin-bottom: auto;
+  }
+
+  &.is__academy {
+    float: right;
+    &::after {
+      position: absolute;
+      clear: both;
+      content: '';
+    }
+  }
+}
+
+.button-text {
+  vertical-align: middle;
+}

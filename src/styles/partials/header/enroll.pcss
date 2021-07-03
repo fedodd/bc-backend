@@ -1,0 +1,52 @@
+.enroll {
+  overflow: hidden;
+  height: $header-height;
+  
+/*   @mixin respond-to desk {
+    height: $header-heightSmall;
+  } */
+
+  &.is__mobile {
+    height: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.enroll-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $margin-holder;
+  padding-bottom: $header-height;
+  height: 100%;
+  color: white;
+  background-color: $color-accent;
+  background-color: black;
+  background-image: linear-gradient( $color-accent 50%, transparent 50%);
+  transition: .3s;
+
+  @mixin respond-to medium {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  @mixin respond-to desk {
+    padding: 0 30px;
+    padding-bottom: $header-heightSmall;
+
+    &:hover {
+      background-position-y: $header-heightSmall;
+    }
+  }
+
+  &:hover {
+    background-position-y: $header-height;
+  }
+}
+
+.enroll-title {
+  display: inline-block;
+}

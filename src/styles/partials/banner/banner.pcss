@@ -1,0 +1,107 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh-$header-height);
+  color: white;
+  background-color: black;
+
+  @mixin respond-to desk {
+    height: calc(100vh-$header-heightSmall);
+  }
+}
+
+.banner-sliders {
+  width: 100%;
+  height: inherit;
+}
+
+#bannerSliders {
+  margin-bottom: 0;
+}
+
+.banner .banner-slider {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: calc(100vh-$header-height);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+
+  @mixin respond-to desk {
+    height: calc(100vh-$header-heightSmall);
+  }
+}
+
+.banner-title {
+  margin: 0;
+  padding: 0;
+  font: $font-mainTitle;
+  white-space: pre-line;
+  text-transform: uppercase;
+  
+  @mixin respond-to desk {
+    font-size: 90px;
+    line-height: 92px;
+  }
+
+  @mixin respond-to medium {
+    font: $font-mainTitleMobile;
+  }
+}
+
+.banner-imgWrapper {
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+}
+
+.banner-slider .banner-imgWrapper .banner-img {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+.banner-test {
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: calc(50% + 20px);
+  padding: 0 $margin-holder;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  white-space: pre-line;
+  transform: translateY(-50%);
+
+  @mixin respond-to medium {
+    padding: 0 $margin-holderMobile;
+  }
+}
+
+.banner-subtitle {
+  margin: 0;
+  padding: 0;
+  font: $font-subtitle;
+  white-space: pre-line;
+
+  @mixin respond-to desk {
+    font: $font-subtitleSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-subtitleMobile;
+  }
+}

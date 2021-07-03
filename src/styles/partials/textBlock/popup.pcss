@@ -1,0 +1,95 @@
+.popup {
+  position: absolute;
+  top: -20px;
+  left: -120px;
+  z-index: 20;
+  display: none;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 90px 60px 60px 60px;
+  box-sizing: border-box;
+  width: 50vw;
+  background-color: $color-accent;
+
+  @mixin respond-to desk {
+    padding: 60px 40px 40px 40px;
+  }
+  
+  &.is__active {
+    display: flex;
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 45px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+
+  @mixin respond-to desk {
+    top: 30px;
+    right: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.is__alt {
+    top: $margin-holder;
+    right: 0;
+    
+    @mixin respond-to desk {
+      top: 30px;
+    }
+  }
+}
+
+.popup-closeElem {
+  &::after,
+  &::before { 
+    position: absolute;
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background-color: black;
+    content: '';
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  .popup-close.is__alt &::after,
+  .popup-close.is__alt &::before {
+    background-color: white;
+  }
+
+  .popup-close.is__alt:hover &::after,
+  .popup-close.is__alt:hover &::before {
+    background-color: $color-accent;
+  }
+}
+
+
+.popup-title {
+  flex-basis: auto;
+  margin: 0;
+  padding: 0;
+  font: $font-service;
+  text-transform: uppercase;
+  color: white;
+
+  @mixin respond-to desk {
+    font: $font-serviceSmall;
+  }
+}
+
+.popup-form {
+  flex-basis: auto;
+}

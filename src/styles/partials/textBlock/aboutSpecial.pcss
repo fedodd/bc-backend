@@ -1,0 +1,49 @@
+.aboutSpecial {
+  position: relative;
+  z-index: -2;
+  font: $font-text;
+  text-align: center;
+  color: white;
+  background-color: $color-accent;
+
+  @mixin respond-to desk {
+    font: $font-textSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-textMobile;
+  }
+}
+
+.aboutSpecial-holder {
+  position: relative;
+  padding: 90px 0;
+
+  @mixin respond-to medium {
+    padding: 60px 0;
+  } 
+}
+
+.aboutSpecial-text {
+  margin: 0 auto;
+  width: 55%;
+
+  @mixin respond-to medium {
+    width: 100%;
+  }
+}
+
+.aboutSpecial-img {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: -1;
+  width: 270px;
+  height: 536px;
+  background-image: url('./../img/a_thing_1.svg');
+
+  @mixin respond-to medium {
+    width: 172px;
+    height: 373px;
+  }
+}

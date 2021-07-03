@@ -1,0 +1,47 @@
+.mapBlock {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  
+
+  @mixin respond-to desk {
+    height: 100vh;
+  }
+}
+
+.map-moscow,
+.map-russia {
+  position: relative;
+  height: 100%;
+}
+
+.map-counter {
+  position: absolute;
+  top: -350px;
+  left: -170px;
+  display: block;
+  width: 1500px;
+  height: 1500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map-descr {
+  position: absolute;
+  right: $margin-holder;
+  bottom: 270px; /* высота open + padding 40px  */
+  width: 290px;
+  font: $font;
+  opacity: .75;
+  color: $color-altTitle;
+
+  @mixin respond-to medium {
+    display: none;
+  }
+
+  @mixin respond-to desk {
+    bottom: 200px; /* высота open + padding */
+    width: 220px;
+    font: $font-small;
+  }
+}

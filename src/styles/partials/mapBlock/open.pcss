@@ -1,0 +1,30 @@
+.open {
+  position: absolute;
+  bottom: 0;
+  padding: 30px 0;
+  width: 100%;
+  background-color: rgba(238, 54, 36, .9);
+  
+  @mixin respond-to large {
+    padding: 50px 0 60px 0;
+  }
+}
+
+.open-title {
+  margin: 0 0 60px;
+  width: inherit;
+  font: $font-service;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+
+  @mixin respond-to desk {
+    margin: 0 0 30px;
+    font: $font-serviceSmall;
+  }
+
+  @mixin respond-to medium {
+    margin: 0 0 30px;
+    font: $font-serviceMobile;
+  }
+}

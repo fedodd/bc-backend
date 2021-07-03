@@ -1,0 +1,29 @@
+.banner-stores {
+  position: absolute;
+  right: $margin-holder;
+  bottom: 30px;
+
+  @mixin respond-to medium {
+    bottom: 10px;
+    display: none;
+  }
+}
+
+.banner-store {
+  margin-left: 20px;
+  padding: 5px;
+  height: 40px;
+  transition: $time;
+
+  .header-mobileIcons & {
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    height: 25px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+}

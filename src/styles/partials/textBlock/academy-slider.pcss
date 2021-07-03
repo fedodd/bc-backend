@@ -1,0 +1,118 @@
+.academy-sliderWrapper {
+  position: relative;
+  top: -20px;
+  left: -120px;
+  z-index: -1;
+  overflow: hidden;
+  width: 50vw;
+
+  @mixin respond-to medium {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+  }
+}
+
+.academy-slider {
+  position: relative;
+  
+  &.is__active {
+    display: none;
+  }
+
+  &#academySlider {
+    margin-bottom: 0px;
+  }
+}
+
+.academy-sliderItem {
+  position: relative;
+  width: 100%;
+}
+
+.academy-textWrapper {
+  position: relative;
+  top: -66px; /* высота строки заголовка */
+  left: 120px;
+  width: 70%;
+  opacity: 0;
+
+  @mixin respond-to medium {
+    top: 0;
+    left: 0;
+    padding: 0 $margin-holderMobile;
+    width: 100%;
+  }
+
+  @mixin respond-to desk {
+    top: -50px; /* высота строки заголовка */
+  }
+
+  .slick-active & {
+    opacity: 1;
+  }
+  
+}
+
+.academy-mainTitle {
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: 30px;
+  padding: 0;
+  font: $font-service;
+  white-space: pre-line;
+  text-transform: uppercase;
+  color: white;
+
+  @mixin respond-to desk {
+    margin-bottom: 20px;
+    font: $font-serviceSmall;
+  }
+
+  @mixin respond-to medium {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font: $font-serviceMobile;
+    color: $color-black;
+  }
+}
+
+.academy-descr {
+  margin: 0;
+  padding: 0;
+  font: $font-descrAlt;
+  color: $color-blue;
+
+  @mixin respond-to desk {
+    font: $font-descrAltSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-descrAltMobile;
+  }
+}
+
+.academy-imgWrapper {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+
+  @mixin respond-to medium {
+    width: 100%;
+    height: 35vh;
+  }
+}
+
+.academy-sliderItem .academy-imgWrapper .academy-img {
+  position: absolute;
+  z-index: -1;
+  width: 50vw;
+  height: 50vh;
+  background-size: cover;
+
+  @mixin respond-to medium {
+    width: 100%;
+    height: 35vh;
+  }
+}

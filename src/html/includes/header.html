@@ -5,12 +5,207 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">  
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <title>
     <%=title%>
   </title>
 </head>
 <body>
-  <header class="header">header</header>
-  <div>content</div>
-</body>
-</html>
+  <header class="header">
+    <div class="holder header-holder">
+      <div class="header-logoWrapper">
+        <img class="header-logo" src="./../../img/logo_black.svg" alt="">
+      </div>
+      <nav class="header-nav">
+        <ul class="menu">
+          <li class="menu-item">
+            <a class="menu-link" href="#">О нас</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#"> Цены и услуги</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Франчайзинг</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Академия</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="enroll">
+        <div class="enroll-wrapper">
+          <span class="enroll-title">Записаться онлайн +</span>
+        </div>
+      </div>  
+    </div>
+    <div class="cityBlock" id="cityBlock">
+      <div class="cityBlock-wrapper" id="cityBlock-wrapper">
+        <div class="holder cityBlock-holder">
+          <div class="header-logoWrapper">
+            <img class="header-logo is__alt" src="./../../img/logo_white.svg" alt="">
+          </div>
+          <table class="city-list">
+            <tr class="city-row">
+              <td class="city-item">
+                <a href="" class="city-link">Москва</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Санкт-Петербург</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Воронеж</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Казань</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Екатеринбург</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="city-item">
+                <a href="" class="city-link">Самара</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Тюмень</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Краснодар</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Пермь</a>
+              </td>
+              <td class="city-item">
+                <a href="" class="city-link">Баку</a>
+              </td>
+            </tr>
+          </table>
+          <div class="popup-close is__alt" id="cityClose">
+            <span class="popup-closeElem"></span>
+          </div>
+        </div>
+      </div>
+      <div class="cityActive" id="cityActive">
+        <div class="cityActive-wrapper">
+          <span class="cityActive-title">
+            <span class="cityActive-mapmarker">u</span>Москва
+          </span>
+        </div>
+        <div class="cityActive-wrapper is__moving" id="cityActiveWrapper">
+          <span class="cityActive-title">+ мой город</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-holder is__mobile">
+      <div class="header-mobileRow">
+        <div class="header-logoWrapper is__mobile">
+          <img class="header-logo" src="./../../img/logo_white.svg" alt="">
+        </div>
+        <div class="header-toggleHolder" id="headerToggleBlock">
+          <a href="#" class="header-toggleBlock" >
+            <div class="header-toggle" id="headerToggle">
+              <span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="header-mobileWrapper" id="headerMobileToggle">
+        <div class="cityBlock is__mobile" id="cityBlockMobile">
+          <div class="cityBlock-wrapper is__mobile" id="cityBlock-wrapperMobile">
+            <div class="holder cityBlock-holder is__mobile">
+              <div class="header-logoWrapper">
+                <img class="header-logo is__alt" src="./../../img/logo_white.svg" alt="">
+              </div>
+              <table class="city-list is__mobile">
+                <tr class="city-row">
+                  <td class="city-item">
+                    <a href="" class="city-link">Москва</a>
+                  </td>
+                  <td class="city-item">
+                    <a href="" class="city-link">Санкт-Петербург</a>
+                  </td>
+                </tr>
+                <tr class="city-row">
+                  <td class="city-item">
+                    <a href="" class="city-link">Воронеж</a>
+                  </td>
+                  <td class="city-item">
+                    <a href="" class="city-link">Казань</a>
+                  </td>
+                </tr>
+                <tr class="city-row">
+                  <td class="city-item">
+                    <a href="" class="city-link">Екатеринбург</a>
+                  </td>
+                  <td class="city-item">
+                    <a href="" class="city-link">Самара</a>
+                  </td>
+                </tr>
+                <tr class="city-row">
+                  <td class="city-item">
+                    <a href="" class="city-link">Тюмень</a>
+                  </td>
+                  <td class="city-item">
+                    <a href="" class="city-link">Краснодар</a>
+                  </td>
+                </tr>
+                <tr class="city-row">
+                  <td class="city-item">
+                    <a href="" class="city-link">Пермь</a>
+                  </td>
+                  <td class="city-item">
+                    <a href="" class="city-link">Баку</a>
+                  </td>
+                </tr>
+              </table>
+              <div class="popup-close is__alt" id="cityCloseMobile">
+                <span class="popup-closeElem"></span>
+              </div>
+            </div>
+          </div>
+          <p class="cityActive-mobileTitle" id="cityActiveMobile">
+            <span class="cityActive-mapmarker is__mobile">u</span>Москва
+          </p>
+        </div>
+        <nav class="header-nav">
+          <ul class="menu is__mobile">
+            <li class="menu-item">
+              <a class="menu-link" href="#">О нас</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#"> Цены и услуги</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Франчайзинг</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Академия</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="enroll is__mobile">
+          <span class="enroll-title">Записаться онлайн +</span>
+        </div>
+        <div class="header-mobileIcons">
+          <div class="header-stores">
+            <img class="banner-store" src="./../../img/app_store.svg" alt="">
+            <img class="banner-store" src="./../../img/google_play.svg" alt="">
+          </div>
+          <div class="header-social">
+            <img class="social-icon is__fb" src="./../../img/fb.svg" alt="">
+            <img class="social-icon is__inst" src="./../../img/inst.svg" alt="">
+            <img class="social-icon is__vk" src="./../../img/vk.svg" alt="">
+          </div>
+        </div>
+        <div class="header-img"></div>
+      </div>
+    </div>
+  </header>
+  <div class="container">

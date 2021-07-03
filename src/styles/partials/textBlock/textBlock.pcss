@@ -1,0 +1,193 @@
+.textBlock {
+  position: relative;
+  background-color: white;
+}
+
+.textBlock-title {
+  position: absolute;
+  top: 40px;
+  left: $margin-holder;
+  z-index: 5;
+  margin: 0;
+  margin-bottom: 65px;
+  padding: 0;
+  font: $font-altTitle;
+  text-transform: uppercase;
+  opacity: .75;
+  color: $color-altTitle;
+
+  @mixin respond-to desk {
+    top: 30px;
+    margin-bottom: 30px;
+    font: $font-altTitleSmall;
+  }
+
+  @mixin respond-to medium {
+    left: $margin-holderMobile;
+    font: $font-altTitleMobile;
+  }
+
+  &.is__fullColour {
+    opacity: 1;
+  }
+ 
+  .textBlock-content.is__alt & {
+    margin-bottom: auto;
+  }
+
+  .textBlock-wrapper.is__alt  & {
+    position: static;
+    color: $color-black;
+
+    @mixin respond-to medium {
+      position: absolute;
+      opacity: .75;
+      color: $color-altTitle;
+    }
+  }
+
+  .mapBlock.is__Russia & {
+    color: $color-black;
+  }
+
+  &.is__smallMargin {
+     @mixin respond-to large  {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.textBlock-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  @mixin respond-to desk {
+    flex-direction: row;
+  }
+
+  @mixin respond-to medium {
+    &.is__reverse {
+      flex-direction: column-reverse;
+    }
+
+    &.is__academy {
+      height: auto;
+    }
+  }
+}
+
+.textBlock-img {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  background-position: 0 0;
+  background-size: cover;
+
+  @mixin respond-to medium {
+    width: 100%;
+    height: 35vh;
+    background-position: 0% 70%;
+
+    &.is__academy {
+      height: 420px; 
+      background-color: transparent;
+    }
+  }
+}
+
+.textBlock-content {
+  padding: 70px 60px 70px 90px;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+
+  @mixin respond-to desk {
+    padding: 50px 40px 50px 60px;
+  }
+
+  @mixin respond-to medium {
+    padding: 20px $margin-holderMobile 10px;
+    width: 100%;
+    height: 65vh;
+
+    &.is__long {
+      min-height: 65vh;
+    }
+
+    &.is__academy {
+      padding-top: 0;
+    }
+
+/*     &.is__scroll {
+      overflow-y: scroll;
+    } */
+  }
+
+  &.is__alt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .textBlock-wrapper.is__alt  & {
+    padding-top: 40px;
+    padding-left: $margin-holder;
+
+    @mixin respond-to medium {
+      padding: 20px $margin-holderMobile 10px;
+    }
+  }
+}
+
+.textBlock-mainTitle {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  font: $font-title;
+  white-space: pre-line;
+  text-transform: uppercase;
+
+  @mixin respond-to desk {
+    margin-bottom: 35px;
+    font: $font-titleSmall;
+  }
+
+  @mixin respond-to medium {
+    margin-bottom: 30px;
+    font: $font-titleMobile;
+  }
+}
+
+.textBlock-description {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font: $font-descr;
+  white-space: pre-line;
+  color: $color-greyText;
+
+  @mixin respond-to desk {
+    margin-bottom: 20px;
+  }
+
+  @mixin respond-to middle{
+    font: $font-descrSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-descrMobile;
+  }
+
+  &:last-of-type {
+    margin-bottom: 50px;
+
+    @mixin respond-to desk {
+      margin-bottom: 30px;
+    }
+
+    @mixin respond-to medium {
+      margin-bottom: 30px;
+    }
+  }
+}

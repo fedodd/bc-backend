@@ -5,3 +5,5 @@ dist
 .postcss-sorting.json
 .sass-cache
 npm-debug.log
+.vscode
+slick

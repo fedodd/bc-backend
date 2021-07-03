@@ -1,0 +1,157 @@
+.service {
+  position: relative;
+  height: calc(100vh - 375px); /* 375 - высота списка услуг без паддингов */
+  color: white;
+  background-color: $color-dark;
+
+  @mixin respond-to desk {
+    height: calc(100vh - 300px); /* 335 - высота списка услуг + сниженный топ */
+  }
+
+  @mixin respond-to large {
+    max-height: 600px;
+  }
+
+  @mixin respond-to medium {
+    height: 60vh;
+  }
+}
+
+.service-wrapperBlock {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+  @mixin respond-to desk {
+    top: -60px;
+    left: 50%;
+    width: 50vw;
+    height: 80%;
+    transform: translateX(-50%);
+  }
+
+  @mixin respond-to large {
+    top: -85px;
+  }
+}
+
+.service-slider {
+  position: absolute;
+  bottom: -10000px;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+
+  @mixin respond-to medium {
+    bottom: 0;
+    left: -10000px;
+    background-color: $color-dark;
+  }
+
+  &.is__active {
+    bottom: 0;
+    @mixin respond-to medium {
+      left: 0;
+    }
+  }
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  background-position: 0 0;
+  background-size: cover;
+
+  @mixin respond-to medium {
+    height: 65%;
+  }
+}
+
+.service-textWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 50px;
+
+  @mixin respond-to desk {
+    padding-left: 40px;
+  }
+}
+
+.service-textBlock {
+  position: relative;
+  top: -66px; /* высота строки */
+  z-index: 2;
+  width: 75%;
+
+
+
+  @mixin respond-to desk {
+    top: -50px; /* высота строки */
+  }
+
+  @mixin respond-to medium {
+    top: -44px; /* высота строки */
+  }
+}
+
+.service-title {
+  margin: 0;
+  padding: 0;
+  font: $font-service;
+  white-space: pre-line;
+  text-transform: uppercase;
+
+  @mixin respond-to desk {
+    font: $font-serviceSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-serviceMobile;
+  }
+}
+
+.service-description {
+  margin: 0;
+  margin-top: 20px;
+  font: $font-descrAlt;
+  white-space: pre-line;
+  color: $color-blue;
+
+  @mixin respond-to desk {
+    font: $font-descrAltSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-descrAltMobile;
+  }
+}
+
+.service-priceBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-priceLine {
+  display: block;
+  margin: 30px 0;
+  width: 58px;
+  height: 7px;
+  background-color: $color-blue;
+
+  @mixin respond-to medium {
+    display: none;
+  }
+}
+
+.service-price {
+  font: $font-service;
+
+  @mixin respond-to medium {
+    font: $font-serviceMobile;
+  }
+  
+  @mixin respond-to desk {
+    font: $font-serviceSmall;
+  }
+}

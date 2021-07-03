@@ -1,0 +1,104 @@
+.media {
+  margin: 0 auto;
+  padding: 80px 0;
+  background-color: $color-bgrDark;
+
+  @mixin respond-to desk {
+    padding: 60px 0;
+  }
+}
+
+.media-holder {
+  margin: 0 auto;
+  width: 50%;
+
+  @mixin respond-to medium {
+    margin: 0 $margin-holderMobile;
+    width: auto;
+  }
+}
+
+.media-title {
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
+  font: $font-service;
+  text-align: center;
+  color: white;
+
+  @mixin respond-to desk {
+    margin-bottom: 40px;
+    font: $font-serviceSmall;
+  }
+
+  @mixin respond-to medium {
+    margin-bottom: 30px;
+    font: $font-serviceMobile;
+  }
+}
+
+.media-descr {
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  font: $font-descr;
+  text-align: center;
+  color: $color-grey;
+
+  @mixin respond-to desk {
+    margin-bottom: 40px;
+    font: $font-descrSmall;
+  }
+
+  @mixin respond-to medium {
+    margin-bottom: 30px;
+    font: $font-descrMobile;
+  }
+}
+
+.media-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
+
+  @mixin respond-to medium {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    align-content: space-between;
+  }
+}
+
+.media-label {
+
+  @mixin respond-to desk {
+    height: 54px;
+    &.is__small {
+      height: 38px;
+    }
+  }
+
+  @mixin respond-to medium {
+    height: 38px;
+
+    &.is__small {
+      height: 28px;
+    }
+  }
+
+  @mixin respond-to large {
+    height: 72px;
+    &.is__small {
+      height: 50px;
+    }
+  }
+}
+
+.media-labelBox {
+  @media only screen and (max-width: 620px) {
+    padding: 10px 8vw;
+  } 
+}

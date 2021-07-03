@@ -1,0 +1,28 @@
+.priceBlock-img {
+  position: absolute;
+  top: 135px;
+  left: 100px;
+  z-index: 1;
+  width: 270px;
+  height: 536px;
+  background-image: url('./../img/a_thing_2.svg');
+
+  @mixin respond-to desk {
+    top: 100px;
+  }
+
+  @mixin respond-to medium {
+    opacity: 0;
+
+  }
+
+  &.is__alt {
+    opacity: 0;
+    @mixin respond-to medium {
+      top: 42vh;
+      width: 171px;
+      height: 342px;
+      opacity: 1;
+    }
+  }
+}

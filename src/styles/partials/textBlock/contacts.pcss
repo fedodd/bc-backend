@@ -1,0 +1,57 @@
+.adressList {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+  font: $font-descr;
+
+  @mixin respond-to desk {
+    font: $font-descrSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-descrMobile;
+  }
+}
+
+.adressList-item {
+  margin-bottom: 40px;
+
+  @mixin respond-to medium {
+    margin-bottom: 20px;
+  }
+}
+
+.adressList-name {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.adressList-descr {
+  margin: 0;
+  padding: 0;
+  color: $color-greyText;
+}
+
+.contacts-phone,
+.contacts-mail {
+  display: block;
+  margin-bottom: 5px;
+  font: $font-descr;
+  font-weight: bold;
+  text-decoration: none;
+  color: $color-black;
+
+  @mixin respond-to desk {
+    font: $font-descrSmall;
+  }
+
+  @mixin respond-to medium {
+    font: $font-descrMobile;
+  }
+  
+  &:hover {
+    color: $color-accent;
+  }
+}
